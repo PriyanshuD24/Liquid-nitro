@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Additional styles */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  line-height: 14px;
+}
+
+
+.box:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #52a7d6;
+  --b: 1.5px; /* Define the border size */
+  --s: 10px; /* Define the size for calculation */
+  --g1: #000 var(--b), #0000 0 calc(100% - var(--b)), #000 0;
+  --g2: #0000 calc(0.707 * var(--s)), #000 0 calc(0.707 * var(--s) + var(--b)),
+    #0000 0 calc(100% - 0.707 * var(--s) - var(--b)), #000 0 calc(100% - 0.707 * var(--s)), #0000 0;
+  -webkit-mask: linear-gradient(45deg, var(--g2)), linear-gradient(-45deg, var(--g2)),
+    linear-gradient(90deg, var(--g1)) 50% / 100% calc(100% - 2 * var(--s)) no-repeat,
+    linear-gradient(180deg, var(--g1)) 50% / calc(100% - 2 * var(--s)) 100% no-repeat;
+  mask: linear-gradient(45deg, var(--g2)), linear-gradient(-45deg, var(--g2)),
+    linear-gradient(90deg, var(--g1)) 50% / 100% calc(100% - 2 * var(--s)) no-repeat,
+    linear-gradient(180deg, var(--g1)) 50% / calc(100% - 2 * var(--s)) 100% no-repeat;
+}
