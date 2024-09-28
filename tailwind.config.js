@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -16,9 +17,9 @@ export default {
 
       },
       backgroundImage: {
-        'backgroundCard': "url('./src/assets/background/bg.png')",
-        'backgroundGradientCard': "url('./src/assets/background/bg-gradient.png')",
-        'chakra' : "url('./src/assets/background/chakra.png')"
+        'backgroundCard': "url('/src/assets/background/bg.png')",
+        'backgroundGradientCard': "url('/src/assets/background/bg-gradient.png')",
+        'chakra' : "url('/src/assets/background/chakra.png')"
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],

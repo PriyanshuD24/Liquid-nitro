@@ -13,15 +13,15 @@ const CustomNewCard = ({children, setScene}) => {
   }, []);
 
   return (
-    <div className="flex flex-col top-0 left-0 max-w-[100vw] overflow-x-hidden h-[100vh] text-white  fixed w-full  animate-fade">
+    <div className="flex flex-col top-0 left-0 max-w-[100vw] overflow-x-hidden h-[100%]  text-white  fixed w-full  animate-fade">
       {/* Particles background */}
       <div 
-                className="absolute text-black top-0 left-0 w-full h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundCard "
+                className={`absolute text-black top-0 left-0 bottom-0 right-0 w-full h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundCard `}
               
 
             />
               <div 
-                className="absolute text-black top-0 left-0 w-full h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundGradientCard "
+                className="absolute text-black top-0 left-0 bottom-0 right-0 w-full h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundGradientCard "
               
 
             />
