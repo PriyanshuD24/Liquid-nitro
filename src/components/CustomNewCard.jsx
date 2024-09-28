@@ -13,15 +13,15 @@ const CustomNewCard = ({children, setScene}) => {
   }, []);
 
   return (
-    <div className="flex flex-col top-0 left-0 max-w-[100vw] overflow-x-hidden h-[100%]  text-white  fixed w-full  animate-fade">
+    <div className="flex flex-col top-0 left-0 max-w-[100vw] overflow-x-hidden overflow-y-scroll h-full   text-white  fixed w-full  animate-fade">
       {/* Particles background */}
       <div 
-                className={`absolute text-black top-0 left-0 bottom-0 right-0 w-full h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundCard `}
+                className={`fixed text-black top-0 left-0 bottom-0 right-0 min-w-full min-h-full  bg-cover z-[10] mix-blend-screen bg-backgroundCard `}
               
 
             />
               <div 
-                className="absolute text-black top-0 left-0 bottom-0 right-0 w-full h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundGradientCard "
+                className="fixed text-black top-0 left-0 bottom-0 right-0 min-w-full min-h-full bg-no-repeat bg-cover z-[10] mix-blend-screen bg-backgroundGradientCard "
               
 
             />
@@ -65,8 +65,7 @@ onClick={()=>setScene(0)}
           </p>
         </div> */}
         {/* ---footer----- */}
-        <div className="flex justify-between 
-          ">
+        <div className="flex justify-between ">
     <div className="flex gap-8">
 <img src={audio} alt="" className="w-10 sm:w-12 md:w-16 z-20 hover:cursor-pointer hover:scale-90 transition-all duration-300" />
 <img src={share} alt="" className="w-10 sm:w-12 md:w-16 z-20 hover:cursor-pointer hover:scale-90 transition-all duration-300" />

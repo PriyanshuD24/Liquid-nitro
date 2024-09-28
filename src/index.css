@@ -33,6 +33,30 @@ body {
   z-index: 20 !important; /* Ensure it stays above the background and particles */
   position: relative; /* Ensure z-index works */
 }
+::-webkit-scrollbar {
+  width: 6px;
+  /* position: absolute; */
+
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+  opacity: 0.5;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: #555; */
+  cursor: pointer;
+}
 
 
 canvas {

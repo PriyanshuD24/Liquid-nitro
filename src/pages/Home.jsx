@@ -10,6 +10,11 @@ import Idle_CPO from "./Idle_CPO";
 import Idle_COO from "./Idle_COO";
 import Int_INV_01 from "./Int_INV_01";
 import Members from "./Members";
+import Idle_NG from "./offerings/Idle_NG";
+import Idle_GA from "./offerings/Idle_GA";
+import Idle_CD from "./offerings/Idle_CD";
+import Idle_LG from "./offerings/Idle_LG";
+
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -21,30 +26,36 @@ export default function Home() {
       setLoading(false);
     }
   }
+  function sendmail(){
+  console.log(sceneVar);
 
+    window.location.href = "mailto:contact@liquidnitrogames.com";
+    setSceneVar(0);
+  }
   function onSplineMouseDown(e) {
-    //console.log(e.target.name);
+    // console.log(e.target.name);
     setSceneVar(e.target.name);
   }
+  
 
   // Handle parallax effect for the card based on mouse movement
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     const { clientX, clientY } = event;
 
-      // Adjust these values to control the intensity of the parallax effect
-      const moveX = (clientX / window.innerWidth) * 20 - 10;
-      const moveY = (clientY / window.innerHeight) * 20 - 10;
+  //     // Adjust these values to control the intensity of the parallax effect
+  //     const moveX = (clientX / window.innerWidth) * 20 - 10;
+  //     const moveY = (clientY / window.innerHeight) * 20 - 10;
 
-      setCardPosition({ x: moveX, y: moveY });
-    };
+  //     setCardPosition({ x: moveX, y: moveY });
+  //   };
 
-    document.addEventListener("mousemove", handleMouseMove);
+  //   document.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
 
   return (
     <div className="relative bg-red-500">
@@ -157,6 +168,28 @@ export default function Home() {
           }}
         />
       )}
+
+      {/* -----------OFFERINGS----------- */}
+       {sceneVar === "Idle_NG" && (
+        <Idle_NG setScene={setSceneVar}/>
+      )}
+        {sceneVar === "Idle_GA" && (
+        <Idle_GA setScene={setSceneVar}/>
+      )}
+       {sceneVar === "Idle_CD" && (
+        <Idle_CD setScene={setSceneVar}/>
+      )}
+       {sceneVar === "Idle_LG" && (
+        <Idle_LG setScene={setSceneVar}/>
+      )}
+      {/* ---------Reach us----------- */}
+      {
+        sceneVar=="Idle_ROBC" && sendmail()
+      }
+      {
+         sceneVar==="Idle_ROYC" && sendmail()
+      }
     </div>
   );
 }
+
