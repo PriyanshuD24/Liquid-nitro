@@ -4,8 +4,10 @@ import CustomNewCard from "../../components/CustomNewCard";
 const Idle_CD = ({ setScene }) => {
   return (
     <CustomNewCard setScene={setScene}>
-      <div className="grow space-y-8">
-        <h1 className="text-3xl sm:text-5xl lg:text-7xl capitalize ">Co-Production</h1>
+      {/* <div className="grow space-y-8 max-w-[1200px] mx-auto z-20 overflow-y-scroll "> */}
+<div className="grow space-y-8 max-w-[1200px] mx-auto px-2 flex flex-col md:pt-10 z-20 overflow-y-scroll"> 
+
+        <h1 className="text-3xl sm:text-5xl lg:text-5xl capitalize ">Co-Production</h1>
         <div className="space-y-4 sm:space-y-8">
           <Content
             heading={
@@ -68,8 +70,8 @@ export default Idle_CD;
 const Content = ({ heading, children }) => {
   return (
     <div className="space-y-2">
-      <h2 className="text-lg sm:text-xl lg:text-3xl font-bold">{heading}</h2>
-      <p className="text-base sm:text-lg lg:text-xl">{children}</p>
+      <h2 className="text-lg sm:text-xl lg:text-2xl font-bold">{heading}</h2>
+      <p className="text-base sm:text-lg lg:text-xl px-2">{children}</p>
     </div>
   );
 };

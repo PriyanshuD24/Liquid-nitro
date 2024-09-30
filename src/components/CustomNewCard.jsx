@@ -13,7 +13,7 @@ const CustomNewCard = ({children, setScene}) => {
   }, []);
 
   return (
-    <div className="flex flex-col top-0 left-0 max-w-[100vw] overflow-x-hidden overflow-y-scroll h-full   text-white  fixed w-full  animate-fade">
+    <div className="flex font-titillium flex-col top-0 left-0 max-w-[100vw] overflow-hidden  h-full   text-white  fixed w-full  animate-fade">
       {/* Particles background */}
       <div 
                 className={`fixed text-black top-0 left-0 bottom-0 right-0 min-w-full min-h-full  bg-cover z-[10] mix-blend-screen bg-backgroundCard `}
@@ -28,7 +28,7 @@ const CustomNewCard = ({children, setScene}) => {
              <div 
                 // className="absolute text-black top-0 left-0 w-96 h-96 bg-no-repeat bg-cover z-[10] mix-blend-screen bg-chakra  "
               
-className="absolute opacity-[0.03]  -top-1/4 -left-1/2 sm:left-auto sm:-top-1/2  sm:-right-1/2   sm:-translate-x-1/2 "
+className="absolute opacity-[0.03]  -top-1/3 -left-1/2 sm:left-auto sm:-top-1/2  sm:-right-1/2   sm:-translate-x-1/2 "
             >
               <img src={chakra} alt="" srcset="" className="animate-spin-slow w-[450px] sm:w-auto " /> 
             </div>
@@ -50,14 +50,18 @@ className="absolute opacity-[0.03]  -top-1/4 -left-1/2 sm:left-auto sm:-top-1/2 
             <span className="z-20">careers</span>
           </div>
         </div>
-<div className="absolute z-20 right-4 top-[2%] sm:top-[10%] md:top-[20%] "
+<div className="absolute z-30 right-4 top-[2%] sm:top-[10%] md:top-[20%] "
 onClick={()=>setScene(0)}
 >
 
-    <img src={crossButton} alt="" className="w-10 sm:w-12 md:w-16 z-20 hover:cursor-pointer  hover:scale-90 transition-all duration-300 " />
+    <img src={crossButton} alt="" className="w-10 sm:w-12 md:w-16 z-30 hover:cursor-pointer  hover:scale-90 transition-all duration-300 " />
 </div>
 {/* -----body------ */}
+  {/* <div className="overflow-y-scroll space-y-8 "> */}
+
 {children}
+  {/* </div> */}
+{/* </div> */}
         {/* <div className="flex flex-col justify-center items-center md:items-start grow w-full md:max-w-[80%] gap-10">
           <h1 className="text-3xl sm:text-5xl lg:text-7xl capitalize z-20 w-fit ">Company history</h1>
           <p className="text-lg sm:text-xl lg:text-3xl z-20 w-fit text-center md:text-left ">

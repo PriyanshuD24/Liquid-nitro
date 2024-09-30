@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ---- reset ---- */
+
 body {
   margin: 0;
-  font: normal 75% Arial, Helvetica, sans-serif;
+  font: normal 75%  Arial, Helvetica, sans-serif;
 }
 @keyframes fade-in {
   from {
@@ -35,21 +36,32 @@ body {
 }
 ::-webkit-scrollbar {
   width: 6px;
-  /* position: absolute; */
+  z-index: 20;
+  position: relative;
+  left: 100px;
+  border-radius: 10px;
+
+
 
   
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: rgb(0, 0, 0, 0);
   opacity: 0.5;
+  z-index: 20;
+
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: #eee;
+  
+  z-index: 20;
+  border-radius: 10px;
+
 }
 
 /* Handle on hover */

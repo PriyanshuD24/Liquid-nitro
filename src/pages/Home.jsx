@@ -27,16 +27,17 @@ export default function Home() {
     }
   }
   function sendmail(){
-  console.log(sceneVar);
 
     window.location.href = "mailto:contact@liquidnitrogames.com";
     setSceneVar(0);
   }
   function onSplineMouseDown(e) {
-    // console.log(e.target.name);
+    console.log("-----",e.target);
+    // i want to click the element with specific name
     setSceneVar(e.target.name);
   }
   
+  console.log(sceneVar);
 
   // Handle parallax effect for the card based on mouse movement
   // useEffect(() => {
