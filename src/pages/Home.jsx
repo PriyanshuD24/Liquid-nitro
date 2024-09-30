@@ -31,7 +31,7 @@ export default function Home() {
       setTimeout(()=>{
         setLoading(false);
 
-      },[2000])
+      },[4000])
     }
   }
   function sendmail(){
