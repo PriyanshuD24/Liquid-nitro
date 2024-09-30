@@ -6,7 +6,7 @@ const Idle_GA = ({setScene}) => {
   return (
     <CustomNewCard setScene={setScene} >
     {/* <div className='grow space-y-8  max-w-[1200px] mx-auto overflow-y-scroll px-2 z-20 flex flex-col justify-center'  > */}
-<div className="grow space-y-8 max-w-[1200px] mx-auto px-2 flex flex-col md:pt-10 z-20 overflow-y-scroll"> 
+<div className="grow space-y-8 max-w-[1200px] mx-auto px-2 flex flex-col md:pt-10 z-20 "> 
     
 <h1 className='text-3xl sm:text-5xl lg:text-5xl capitalize  '>Geo Adaptation</h1>
 <div className='text-lg sm:text-xl  space-y-4'>

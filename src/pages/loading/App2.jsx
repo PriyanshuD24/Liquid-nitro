@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./loader.css";
 import {bgLoadingSound} from '../../assets/musics';
+// import { bgLoading } from "";
+
 
 const App = () => {
   const [overlayVisible, setOverlayVisible] = useState(true); // State to manage overlay visibility
@@ -47,7 +49,7 @@ const App = () => {
 
       <div className="tilt-wrapper">
         <div
-          className="tilt-background "
+          className="tilt-background"
           data-tilt
           data-tilt-max="5"
           data-tilt-transition="true"

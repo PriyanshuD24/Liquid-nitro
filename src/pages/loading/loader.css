@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
   html,
   body {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   body {
@@ -23,14 +24,14 @@
     position: absolute;
   }
   .tilt-background {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     /* position: absolute;
     top: 0;
     left: 0; */
-    background-image: url("https://i.ibb.co/Jszb3Xn/BG-New01-0-75x-0-75x-0-75x.png");
+    background-image: url("https://i.ibb.co/G9RtLFp/BG-New01-0-75x-0-75x.png");
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
     transform-style: preserve-3d;
@@ -73,7 +74,7 @@
   /* Centered Image */
   .center-image {
     position: absolute;
-    top: 50%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 210px; /* Adjust width as needed */
@@ -140,7 +141,7 @@
   @media (max-width: 1000px) {
     .center-image {
       transform: translate(-50%, -50%) scale(1);
-      top: 38%;
+      top: 51%;
     }
   
     @keyframes rotate {

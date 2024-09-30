@@ -53,7 +53,7 @@ const Members = ({ setScene, idx }) => {
 
     return (
         <CustomNewCard setScene={setScene}>
-            <div className="flex items-center justify-center w-full grow  ">
+            <div className="flex items-center justify-center w-full grow   ">
                 {/* Custom Prev Button */}
                 <div onClick={handlePrev} className=" z-20 cursor-pointer">
                     <img src={back} alt="prev" className="min-w-6 md:min-w-16 lg:min-w-20 " />
@@ -118,7 +118,7 @@ const Members = ({ setScene, idx }) => {
 
 const Content = ({ index, info }) => {
     return (
-        <div className="flex flex-wrap-reverse md:flex-nowrap justify-between items-center w-[100%]  ">
+        <div className="flex flex-wrap-reverse md:flex-nowrap justify-between   w-full ">
             <div className="flex flex-col justify-center gap-4 sm:gap-8 w-full md:basis-1/2  mx-auto md:mx-0">
                 <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-left hidden md:block ">
                     {info[index]?.designation}
@@ -133,13 +133,13 @@ const Content = ({ index, info }) => {
                 </div>
             </div>
 
-            <div className="flex flex-col  space-y-6 mx-auto md:mx-0  ">
+            <div className="flex flex-col  space-y-6 mx-auto md:mx-0   ">
                 {/* <div className='bg-black rounded-xl overflow-hidden z-20'> */}
 
                 <img
                     src={info[index]?.image}
                     alt="profile"
-                    className=" max-w-[300px] md:max-w-md rounded-xl  z-20 "
+                    className=" max-w-[300px] md:max-w-[320px] h-[300px] object-cover rounded-xl  z-20 "
                     />
                     {/* </div> */}
                 <div className="sm:space-y-2 mb-4 sm:mb-0">

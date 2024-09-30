@@ -5,10 +5,10 @@ const Idle_NG = ({ setScene }) => {
   return (
     <CustomNewCard setScene={setScene}>
       {/* <div className="grow space-y-8 max-w-[1200px] mx-auto px-2 flex flex-col justify-center  overflow-y-scroll z-20"> */}
-<div className="grow space-y-8 max-w-[1200px] mx-auto px-2 flex flex-col md:pt-10 z-20 overflow-y-scroll"> 
+<div className=" space-y-8 max-w-[1200px] mx-auto px-2 flex flex-col md:pt-10 z-20 "> 
 
         <h1 className="text-3xl sm:text-5xl lg:text-5xl capitalize z-20">LMTs & New Games</h1>
-        <div className="text-lg sm:text-xl  space-y-4 sm:space-y-8 max-h-fit ">
+        <div className="text-lg sm:text-xl  space-y-4 sm:space-y-8   ">
 
         <p className="w-fit">
           Successfully Launch New Games
