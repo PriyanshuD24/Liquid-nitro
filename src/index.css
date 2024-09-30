@@ -118,3 +118,4 @@ canvas {
     linear-gradient(90deg, var(--g1)) 50% / 100% calc(100% - 2 * var(--s)) no-repeat,
     linear-gradient(180deg, var(--g1)) 50% / calc(100% - 2 * var(--s)) 100% no-repeat;
 }
+

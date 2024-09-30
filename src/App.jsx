@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CustomNewCard from "./components/CustomNewCard";
+import Loader from "./pages/loading/Loader";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -9,10 +10,7 @@ const App = () => {
       path: "/",
       element: <Home />,
     },
-    {
-      path: "/custom",
-      element: <CustomNewCard/>
-    }
+  
   ]);
 
   return <RouterProvider router={router} />;

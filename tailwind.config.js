@@ -12,7 +12,7 @@ export default {
         primary: '#00bfff'
       },
       animation: {
-        'spin-slow': 'spin 40s linear infinite',
+        'spin-slow': 'spin 60s linear infinite',
         'fade': 'fade-in 0.3s ',
 
       },

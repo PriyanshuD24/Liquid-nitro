@@ -14,6 +14,10 @@ import Idle_NG from "./offerings/Idle_NG";
 import Idle_GA from "./offerings/Idle_GA";
 import Idle_CD from "./offerings/Idle_CD";
 import Idle_LG from "./offerings/Idle_LG";
+import Loader from "./loading/Loader";
+import Int_NL01 from "./nitroLife/Int_NL01";
+import Int_NL02 from "./nitroLife/Int_NL02";
+import Int_NL03 from "./nitroLife/Int_NL03";
 
 
 export default function Home() {
@@ -23,7 +27,11 @@ export default function Home() {
 
   function onLoad(spline) {
     if (spline?._data?.scene) {
-      setLoading(false);
+      
+      setTimeout(()=>{
+        setLoading(false);
+
+      },[2000])
     }
   }
   function sendmail(){
@@ -61,9 +69,7 @@ export default function Home() {
   return (
     <div className="relative bg-red-500">
       {loading && (
-        <div className="fixed top-0 right-0 h-[100svh] w-screen z-50 flex justify-center items-center bg-white">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
-        </div>
+       <Loader/>
       )}
 
       <Spline
@@ -189,6 +195,24 @@ export default function Home() {
       }
       {
          sceneVar==="Idle_ROYC" && sendmail()
+      }
+
+      {/* ----------nitroLife----------- */}
+
+      {
+        sceneVar==="Int_NL01" && (
+          <Int_NL01 setScene={setSceneVar}/>
+        )
+      }
+        {
+        sceneVar==="Int_NL02" && (
+          <Int_NL02 setScene={setSceneVar}/>
+        )
+      }
+        {
+        sceneVar==="Int_NL03" && (
+          <Int_NL03 setScene={setSceneVar}/>
+        )
       }
     </div>
   );

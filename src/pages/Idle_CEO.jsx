@@ -1,5 +1,7 @@
 import React from "react";
 import CustomCard from "../components/customCard";
+// import { ceo } from "../assets/founders";
+
 
 const Idle_CEO = ({ setScene, style }) => {
   return (

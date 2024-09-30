@@ -4,6 +4,7 @@ import { back, music } from '../assets/icons';
 // import { Carousel } from 'react-responsive-carousel';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ceo, cfo, coo, cpo } from '../assets/founders';
 
 
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -14,25 +15,25 @@ const Members = ({ setScene, idx }) => {
             name: "Sandeep Kowdley",
             description: "24+ years of experience in the games industry. Founded India's leading early games company and was the Studio Director for Electronic Arts India for over a decade. ",
             designation: "CEO",
-            image: "",
+            image: ceo,
         },
         {
             name: "Krishna Dhanekula",
             description: "Operations Leader with 18+ years of expertise in financial strategy, operational controls and resource management. In his previous role, as Director of Operations, he managed multi-million dollar budgets and was responsible for driving financial rigor and profitability. ",
             designation: "CFO",
-            image: "",
+            image: cfo,
         },
         {
             name: "Arun Kunchala",
             description: "20 years experience in the Games Industry and was the creative + product leader for EA's India studio for over 17 years. He led several game transitions and end to end live services for some of EA's biggest mobile games during his time. ",
             designation: "CPO",
-            image: "",
+            image: cpo,
         },
         {
             name: "Suresh Manthena",
             description: "Seasoned leader with 17+ years in the industry and spent over a decade at EA collaborating with executives and studios across the globe - spearheading ops for game transitions, assembling teams for diverse Mobile freemium games. ",
             designation: "COO",
-            image: "",
+            image: coo,
         },
     ];
 
@@ -70,7 +71,7 @@ const Members = ({ setScene, idx }) => {
                         setTimeout(()=>{
 
                             document.querySelector(".carasol").classList.remove("z-20");
-                        },50)
+                        },100)
 
                     }} >
                         <Carousel.Item className='carasol'>
@@ -136,7 +137,7 @@ const Content = ({ index, info }) => {
                 {/* <div className='bg-black rounded-xl overflow-hidden z-20'> */}
 
                 <img
-                    src="https://picsum.photos/400"
+                    src={info[index]?.image}
                     alt="profile"
                     className=" max-w-[300px] md:max-w-md rounded-xl  z-20 "
                     />
