@@ -3,7 +3,7 @@ import github from './github.png'
 import music from './music.png'
 import gmail from './gmail.png'
 import phone from './phone.png'
-import back from './back.png'
+import back from './arrow.svg'
 import tel from './tel.png'
 import wat from './wat.png'
 import audio from "./Audio.png";

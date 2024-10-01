@@ -35,9 +35,9 @@ className="absolute opacity-[0.03]  -top-1/3 -left-1/2 sm:left-auto sm:-top-1/2 
               
       <div id="particles-js" className="absolute top-0 left-0 w-full h-full z-10 mix-blend-screen"></div>
       
-      <div className="2xl:w-[1500px] h-full mx-auto p-4 flex flex-col gap-4 relative ">
+      <div className="2xl:w-[1500px] h-full mx-auto flex flex-col justify-center gap-4 relative ">
         {/* --------header------- */}
-        <div className="justify-between gap-4 hidden md:flex ">
+        <div className="justify-between gap-4 hidden md:flex fixed top-0   w-[1500px]   p-4 ">
           <div className="text-2xl font-bold z-20">
             <img src={logoWhite} alt="" className="w-40" />
           </div>
@@ -50,6 +50,7 @@ className="absolute opacity-[0.03]  -top-1/3 -left-1/2 sm:left-auto sm:-top-1/2 
             <span className="z-20">careers</span>
           </div>
         </div>
+        {/* ------cross----------- */}
 <div className="absolute z-30 right-4 top-[2%] sm:top-[10%] md:top-[10%] "
 onClick={()=>setScene(0)}
 >
@@ -57,7 +58,7 @@ onClick={()=>setScene(0)}
     <img src={crossButton} alt="" className="w-10 sm:w-12 md:w-16 z-30 hover:cursor-pointer  hover:scale-90 transition-all duration-300 " />
 </div>
 {/* -----body------ */}
-  <div className="overflow-y-scroll space-y-8 grow z-20 ">
+  <div className="overflow-y-scroll space-y-8  z-20  mb-24 mt-10 md:my-24  p-2 px-4  ">
 
 {children}
   </div>
@@ -69,7 +70,7 @@ onClick={()=>setScene(0)}
           </p>
         </div> */}
         {/* ---footer----- */}
-        <div className="flex justify-between ">
+        <div className="flex justify-between fixed bottom-0 w-[1500px] p-4 ">
     <div className="flex gap-8">
 <img src={audio} alt="" className="w-10 sm:w-12 md:w-16 z-20 hover:cursor-pointer hover:scale-90 transition-all duration-300" />
 <img src={share} alt="" className="w-10 sm:w-12 md:w-16 z-20 hover:cursor-pointer hover:scale-90 transition-all duration-300" />

@@ -15,45 +15,47 @@ const Idle_CD = ({ setScene }) => {
             }
           >
             <p>
-              Extend your game team - We will mirror your game team's DNA and
-              deep understanding of the game Harness India Talent Value
-              proposition - tag team to optimise production costs
+              <span className="font-bold"> Extend your game team </span> - We will mirror your game team's DNA and
+              deep understanding of the game 
+              </p>
+              <p><span className="font-bold">  Harness India Talent Value
+              proposition </span> - tag team to optimise production costs
             </p>
             <p>
-              Flexible Scaling-Tweak your team size based on need, market
-              performance and opportunities Leverage our expertise - in data
+              <span className="font-bold"> Flexible Scaling </span>-Tweak your team size based on need, market
+              performance and opportunities
+              </p>
+              <p><span className="font-bold">  Leverage our expertise </span> - in data
               driven live services and game production.
             </p>
           </Content>
           <Content heading={"Tag Team with us | Do more or Optimize P&L!"}>
             <p>
-              Co-op for every production type - Prototyping, New game
-              production, Mature Live Services - we've built passionate team
-              augments for more than a decade.
+           <span className="font-bold">   Co-op for every production type</span> - Prototyping, New game production, Mature Live Services - we've built passionate team augments for more than a decade.
             </p>
             <p>
-              Fast, Efficient, Predictable - We have years of experience
+            <span className="font-bold">    Fast, Efficient, Predictable </span>- We have years of experience
               perfecting our processes to ensure seamless collaboration across
               disciplines, pods, time zones and more!
             </p>
-            <p>
+            <p className="font-bold mt-3">
               We are not a staff augmentation solution. We deeply care about the
-              game, the players and operate as a "specialized product team or
+              game, the players and operate as a specialized product team or
               pod.
             </p>
             </Content>
 
             <Content heading={"Examples of what we've done"}>
               <p>
-                Built co-development teams to work on different types of
-                engagements - new game productions and games in live services
+          <span className="font-bold">       Built co-development teams to work on different types of
+                engagements</span> - new game productions and games in live services
                 Built co-development pods for a new shooter game, multiple
                 iterations of a tower defence game, a sports clash game
                 Co-development teams as extensions of existing live services
                 teams for multiple Simulation & Casual games, sim games, sports
                 games etc.
               </p>
-              <p>
+              <p className="mt-4">
                 {" "}
                 Contributed to new features, content release cycles, sequel
                 launches, prototyping and new game launches across Genres.

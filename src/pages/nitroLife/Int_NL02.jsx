@@ -1,8 +1,12 @@
 import React from 'react'
+import MeetTeam from './MeetTeam'
+import CustomNewCard from '../../components/CustomNewCard'
 
-const Int_NL02 = () => {
+const Int_NL02 = ({setScene}) => {
   return (
-    <div>Int_NL02</div>
+    <CustomNewCard setScene={setScene}>
+    <MeetTeam/>
+    </CustomNewCard>
   )
 }
 

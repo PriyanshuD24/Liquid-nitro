@@ -53,15 +53,15 @@ const Members = ({ setScene, idx }) => {
 
     return (
         <CustomNewCard setScene={setScene}>
-            <div className="flex items-center justify-center w-full grow   ">
+            <div className="flex items-center justify-center w-full   ">
                 {/* Custom Prev Button */}
-                <div onClick={handlePrev} className=" z-20 cursor-pointer">
-                    <img src={back} alt="prev" className="min-w-6 md:min-w-16 lg:min-w-20 " />
+                <div onClick={handlePrev} className=" z-20 cursor-pointer fixed left-0 top-1/2 -translate-y-1/2 2xl:left-10">
+                    <img src={back} alt="prev" className="w-6 md:w-8 lg:w-10 rotate-180 " />
                 </div>
 
-                <div className="  ">
+                <div className="basis-full  ">
                     {/* Carousel */}
-                    <Carousel className='carasol' interval={null} 
+                    <Carousel  className='carasol' interval={null} 
                     // find real way
                     onSlide={()=>{
                         document.querySelector(".carasol").classList.add("z-20");
@@ -108,8 +108,8 @@ const Members = ({ setScene, idx }) => {
                 </div>
 
                 {/* Custom Next Button */}
-                <div onClick={handleNext} className="z-20 cursor-pointer">
-                    <img src={back} alt="next" className="min-w-6 md:min-w-16 lg:min-w-20 rotate-180" />
+                <div onClick={handleNext} className="z-20 cursor-pointer fixed right-0 top-1/2 -translate-y-1/2 2xl:right-10">
+                    <img src={back} alt="next" className="w-6 md:w-8 lg:w-10 " />
                 </div>
             </div>
         </CustomNewCard>
