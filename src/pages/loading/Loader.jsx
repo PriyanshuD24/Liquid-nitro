@@ -1,15 +1,14 @@
-import React from 'react'
-import App from './App2'
-import Star from './Star'
+import React from "react";
+import App from "./App2";
+import Star from "./Star";
 
 const Loader = () => {
   return (
-<>
+    <>
+      <App />
+      <Star />
+    </>
+  );
+};
 
-<App/>
-<Star/>
-</>
-  )
-}
-
-export default Loader
+export default Loader;

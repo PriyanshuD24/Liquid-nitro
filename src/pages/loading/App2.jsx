@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./loader.css";
-import {bgLoadingSound} from '../../assets/musics';
+import { bgLoadingSound } from "../../assets/musics";
 // import { bgLoading } from "";
-
 
 const App = () => {
   const [overlayVisible, setOverlayVisible] = useState(true); // State to manage overlay visibility
 
   useEffect(() => {
     // Simulate page load by using setTimeout directly on component mount
-    const timeout = setTimeout(() => {
-      setOverlayVisible(false); // Hide the overlay after 2 seconds
-    }, 2000);
+    // const timeout = setTimeout(() => {
+    //   setOverlayVisible(false); // Hide the overlay after 2 seconds
+    // }, 2000);
 
-    const handleClick = () => {
-      const audio = new Audio(bgLoadingSound);
-      audio.play();
-    };
+    // const handleClick = () => {
 
-    window.addEventListener("click", handleClick, { once: true });
+    // };
+
+    // window.addEventListener("click", handleClick, { once: true });
 
     const bgImg = document.querySelector(".tilt-background");
     if (bgImg) {
@@ -32,11 +30,20 @@ const App = () => {
       });
     }
 
-    return () => {
-      clearTimeout(timeout); // Clean up the timeout if the component unmounts
-      window.removeEventListener("click", handleClick);
-    };
+    // return () => {
+    //   clearTimeout(timeout); // Clean up the timeout if the component unmounts
+    //   window.removeEventListener("click", handleClick);
+    // };
   }, []);
+
+  const handleEnter = () => {
+    const audio = new Audio(bgLoadingSound);
+    audio.onended = () => {
+      audio.play(); // restart the audio when it ends
+    };
+    audio.play();
+    setOverlayVisible(false);
+  };
 
   return (
     <div>
@@ -44,6 +51,9 @@ const App = () => {
       {overlayVisible && (
         <div className="overlay" id="overlay">
           <div className="loading-container"></div>
+          <button onClick={handleEnter} className="enterBtn pulsating-text">
+            ENTER
+          </button>
         </div>
       )}
 
@@ -56,7 +66,6 @@ const App = () => {
           data-tilt-gyroscope="true"
           data-tilt-glare="true"
           data-tilt-max-glare="0.2"
-          
         >
           <img
             src="https://i.ibb.co/Kq7F7YF/Planet-for-web-02.png"
