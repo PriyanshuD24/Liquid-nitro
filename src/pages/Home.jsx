@@ -19,7 +19,6 @@ import Int_NL01 from "./nitroLife/Int_NL01";
 import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
 
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [sceneVar, setSceneVar] = useState(0);
@@ -27,24 +26,22 @@ export default function Home() {
 
   function onLoad(spline) {
     if (spline?._data?.scene) {
-      
-      setTimeout(()=>{
-        setLoading(false);
-
-      },[4000])
+      console.log('loaded')
+      // setTimeout(() => {
+      //   setLoading(false);
+      // }, [4000]);
     }
   }
-  function sendmail(){
-
+  function sendmail() {
     window.location.href = "mailto:contact@liquidnitrogames.com";
     setSceneVar(0);
   }
   function onSplineMouseDown(e) {
-    console.log("-----",e.target);
+    console.log("-----", e.target);
     // i want to click the element with specific name
     setSceneVar(e.target.name);
   }
-  
+
   console.log(sceneVar);
 
   // Handle parallax effect for the card based on mouse movement
@@ -68,9 +65,7 @@ export default function Home() {
 
   return (
     <div className="relative bg-red-500">
-      {loading && (
-       <Loader/>
-      )}
+      {loading && <Loader setLoading={setLoading} />}
 
       <Spline
         className="[&_canvas]:!h-[100svh]"
@@ -127,7 +122,7 @@ export default function Home() {
         //     transition: "transform 0.1s ease-out",
         //   }}
         // />
-<Members setScene={setSceneVar} idx={0}/>
+        <Members setScene={setSceneVar} idx={0} />
       )}
 
       {sceneVar === "Idle_CFO" && (
@@ -138,8 +133,7 @@ export default function Home() {
         //     transition: "transform 0.1s ease-out",
         //   }}
         // />
-<Members setScene={setSceneVar} idx={1}/>
-
+        <Members setScene={setSceneVar} idx={1} />
       )}
 
       {sceneVar === "Idle_CPO" && (
@@ -150,8 +144,7 @@ export default function Home() {
         //     transition: "transform 0.1s ease-out",
         //   }}
         // />
-<Members setScene={setSceneVar} idx={2}/>
-
+        <Members setScene={setSceneVar} idx={2} />
       )}
 
       {sceneVar === "Idle_COO" && (
@@ -162,8 +155,7 @@ export default function Home() {
         //     transition: "transform 0.1s ease-out",
         //   }}
         // />
-<Members setScene={setSceneVar} idx={3}/>
-
+        <Members setScene={setSceneVar} idx={3} />
       )}
 
       {sceneVar === "Int_INV_01" && (
@@ -177,44 +169,19 @@ export default function Home() {
       )}
 
       {/* -----------OFFERINGS----------- */}
-       {sceneVar === "Idle_NG" && (
-        <Idle_NG setScene={setSceneVar}/>
-      )}
-        {sceneVar === "Idle_GA" && (
-        <Idle_GA setScene={setSceneVar}/>
-      )}
-       {sceneVar === "Idle_CD" && (
-        <Idle_CD setScene={setSceneVar}/>
-      )}
-       {sceneVar === "Idle_LG" && (
-        <Idle_LG setScene={setSceneVar}/>
-      )}
+      {sceneVar === "Idle_NG" && <Idle_NG setScene={setSceneVar} />}
+      {sceneVar === "Idle_GA" && <Idle_GA setScene={setSceneVar} />}
+      {sceneVar === "Idle_CD" && <Idle_CD setScene={setSceneVar} />}
+      {sceneVar === "Idle_LG" && <Idle_LG setScene={setSceneVar} />}
       {/* ---------Reach us----------- */}
-      {
-        sceneVar=="Idle_ROBC" && sendmail()
-      }
-      {
-         sceneVar==="Idle_ROYC" && sendmail()
-      }
+      {sceneVar == "Idle_ROBC" && sendmail()}
+      {sceneVar === "Idle_ROYC" && sendmail()}
 
       {/* ----------nitroLife----------- */}
 
-      {
-        sceneVar==="Int_NL01" && (
-          <Int_NL01 setScene={setSceneVar}/>
-        )
-      }
-        {
-        sceneVar==="Int_NL02" && (
-          <Int_NL02 setScene={setSceneVar}/>
-        )
-      }
-        {
-        sceneVar==="Int_NL03" && (
-          <Int_NL03 setScene={setSceneVar}/>
-        )
-      }
+      {sceneVar === "Int_NL01" && <Int_NL01 setScene={setSceneVar} />}
+      {sceneVar === "Int_NL02" && <Int_NL02 setScene={setSceneVar} />}
+      {sceneVar === "Int_NL03" && <Int_NL03 setScene={setSceneVar} />}
     </div>
   );
 }
-

@@ -2,10 +2,10 @@ import React from "react";
 import App from "./App2";
 import Star from "./Star";
 
-const Loader = () => {
+const Loader = ({setLoading}) => {
   return (
     <>
-      <App />
+      <App setLoading= {setLoading} />
       <Star />
     </>
   );
