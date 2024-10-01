@@ -3,7 +3,7 @@ import "./loader.css";
 import { bgLoadingSound } from "../../assets/musics";
 // import { bgLoading } from "";
 
-const App = ({setLoading}) => {
+const App = ({ setLoading }) => {
   const [overlayVisible, setOverlayVisible] = useState(true); // State to manage overlay visibility
   const [lineLoadingComplete, setLineLoadingComplete] = useState(false); // State to manage loading completion
 
@@ -39,8 +39,8 @@ const App = ({setLoading}) => {
     audio.play();
     setOverlayVisible(false);
     setTimeout(() => {
-      setLoading(false)
-      console.log('Website Loaded')
+      setLoading(false);
+      console.log("Website Loaded");
     }, 5000);
   };
 
@@ -50,11 +50,16 @@ const App = ({setLoading}) => {
       {overlayVisible && (
         <div className="overlay" id="overlay">
           <div className="loading-container"></div>
-          {lineLoadingComplete && (
-            <button onClick={handleEnter} className="enterBtn pulsating-text">
-              ENTER
-            </button>
-          )}
+          <button
+            onClick={handleEnter}
+            className="enterBtn pulsating-text"
+            style={{
+              visibility: lineLoadingComplete ? "visible" : "hidden",
+              marginRight: lineLoadingComplete ? "0px" : "150px"
+            }}
+          >
+            ENTER
+          </button>
         </div>
       )}
 
