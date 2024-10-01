@@ -3,20 +3,16 @@ import "./loader.css";
 import { bgLoadingSound } from "../../assets/musics";
 // import { bgLoading } from "";
 
-const App = () => {
+const App = ({setLoading}) => {
   const [overlayVisible, setOverlayVisible] = useState(true); // State to manage overlay visibility
+  const [lineLoadingComplete, setLineLoadingComplete] = useState(false); // State to manage loading completion
 
   useEffect(() => {
-    // Simulate page load by using setTimeout directly on component mount
-    // const timeout = setTimeout(() => {
-    //   setOverlayVisible(false); // Hide the overlay after 2 seconds
-    // }, 2000);
-
-    // const handleClick = () => {
-
-    // };
-
-    // window.addEventListener("click", handleClick, { once: true });
+    // Simulate loading animation duration
+    const loadingDuration = 2000; // 2 seconds
+    const timeout = setTimeout(() => {
+      setLineLoadingComplete(true); // Set loading complete to true after 2 seconds
+    }, loadingDuration);
 
     const bgImg = document.querySelector(".tilt-background");
     if (bgImg) {
@@ -30,10 +26,9 @@ const App = () => {
       });
     }
 
-    // return () => {
-    //   clearTimeout(timeout); // Clean up the timeout if the component unmounts
-    //   window.removeEventListener("click", handleClick);
-    // };
+    return () => {
+      clearTimeout(timeout); // Clean up the timeout if the component unmounts
+    };
   }, []);
 
   const handleEnter = () => {
@@ -43,6 +38,10 @@ const App = () => {
     };
     audio.play();
     setOverlayVisible(false);
+    setTimeout(() => {
+      setLoading(false)
+      console.log('Website Loaded')
+    }, 5000);
   };
 
   return (
@@ -51,9 +50,11 @@ const App = () => {
       {overlayVisible && (
         <div className="overlay" id="overlay">
           <div className="loading-container"></div>
-          <button onClick={handleEnter} className="enterBtn pulsating-text">
-            ENTER
-          </button>
+          {lineLoadingComplete && (
+            <button onClick={handleEnter} className="enterBtn pulsating-text">
+              ENTER
+            </button>
+          )}
         </div>
       )}
 
