@@ -25,8 +25,8 @@ const Int_NL01 = ({ setScene }) => {
         // setIndex(index === 0 ? 3 : index - 1);
     };
   return (
-    <CustomCard setScene={setScene} >
-      <div className="max-h-[70svh] overflow-y-auto z-10  pr-2 ">
+    <CustomCard setScene={setScene} className={"overflow-y-auto z-10 "} >
+      <div className="max-h-[70svh]  pr-2 ">
 
       <div className="text-xl md:text-3xl lg:text-4xl      text-white">Live. Create. Thrive. @Liquidnitro</div>
       <div className="flex justify-between items-center">
@@ -34,7 +34,7 @@ const Int_NL01 = ({ setScene }) => {
           <img
             src={back}
             alt="prev"
-            className="w-6 md:w-8 lg:w-10 rotate-180"
+            className="w-6 md:w-8 lg:w-10 rotate-180 opacity-40"
           />
         </div>
 
@@ -54,7 +54,7 @@ const Int_NL01 = ({ setScene }) => {
           <img
             src={back}
             alt="prev"
-            className="w-6 md:w-8 lg:w-10 "
+            className="w-6 md:w-8 lg:w-10  opacity-40"
           />
         </div>
       </div>

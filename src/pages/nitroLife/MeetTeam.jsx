@@ -64,7 +64,7 @@ const MeetTeam = () => {
           <img
             src={back}
             alt="prev"
-            className="w-6 md:w-8 lg:w-10 fixed rotate-180  left-0 2xl:left-10 top-1/2 -translate-y-1/2 "
+            className="w-6 md:w-8 lg:w-10 fixed rotate-180  left-0 2xl:left-10 top-1/2 -translate-y-1/2 opacity-50 "
           />
         </div>
         
@@ -84,7 +84,7 @@ const MeetTeam = () => {
           <img
             src={back}
             alt="prev"
-            className="w-6 md:w-8 lg:w-10 fixed right-0 2xl:right-10  top-1/2 -translate-y-1/2"
+            className="w-6 md:w-8 lg:w-10 fixed right-0 2xl:right-10  top-1/2 -translate-y-1/2 opacity-50"
           />
         </div>
       </div>
