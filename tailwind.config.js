@@ -14,7 +14,8 @@ export default {
         "spin-slow": "spin 60s linear infinite", // slower spin
         fade: "fadeOut 0.5s ease",
         "start" : "start 1s ease",
-        "end" : "end 0.8s ease"
+        "end" : "end 0.8s ease",
+        "card" : "card 0.5s ease"
       },
       // that is actual animation
       keyframes: (theme) => ({

@@ -24,7 +24,7 @@ const CustomCard = ({ setScene, style, className, children }) => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className={`fixed top-0 left-0 w-screen h-svh overflow-hidden z-10 animate-fade flex items-center`}
+      className={`fixed top-0 left-0 w-screen h-svh overflow-hidden z-10 animate-card flex items-center `}
     >
       <div
         id="particles-js"
