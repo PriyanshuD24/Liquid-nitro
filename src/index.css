@@ -64,3 +64,19 @@ img {
     display: none;
   }
 }
+.carousel-control-prev,
+.carousel-control-next {
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    border-radius: 50%; /* Make the buttons round */
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    translate: 0% -50%;
+    z-index: 20;
+    visibility: hidden;
+}
+.carousel-item img {
+  z-index: 20 !important; /* Ensure it stays above the background and particles */
+  position: relative; /* Ensure z-index works */
+}

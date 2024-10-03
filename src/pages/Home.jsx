@@ -12,6 +12,10 @@ import Idle_NG from "./offerings/Idle_NG";
 import Idle_LG from "./offerings/Idle_LG";
 import CustomHeader from "../components/customHeader";
 import { findIndexByValue } from "../constants";
+import Int_NL01 from "./nitroLife/Int_NL01";
+import Int_NL02 from "./nitroLife/Int_NL02";
+import Int_NL03 from "./nitroLife/Int_NL03";
+
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -79,6 +83,10 @@ export default function Home() {
       {sceneVar == "Idle_ROBC" && sendmail()}
       {sceneVar === "Idle_ROYC" && sendmail()}
       {/* ------------NitroLife--------- */}
+      {sceneVar === "Int_NL01" && <Int_NL01 setScene={setSceneVar} />}
+      {sceneVar === "Int_NL02" && <Int_NL02 setScene={setSceneVar} />}
+      {sceneVar === "Int_NL03" && <Int_NL03 setScene={setSceneVar} />}
+      
     </div>
   );
 }

@@ -40,8 +40,8 @@ const CustomCard = ({ setScene, style, className, children }) => {
         />
       </div>
 
-      <div className="p-5 w-full max-w-screen-lg mx-auto lg:mt-0 mt-14">
-        <div>{children}</div>
+      <div className={`p-4 w-full max-w-screen-lg mx-auto lg:mt-0 mt-14   ${className} `}>
+        <div >{children}</div>
       </div>
 
       <div className="flex justify-between fixed bottom-4 left-5 right-5">
