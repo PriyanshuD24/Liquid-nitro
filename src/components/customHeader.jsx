@@ -53,8 +53,14 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
       // console.log(obj);
       
       if (obj) {
-        obj.emitEvent(isHovering ? "mouseHover" : "");
-        // console.log("success");
+        if(isHovering){
+          obj.emitEvent("mouseHover")
+        }
+        else{
+
+            obj.emitEventReverse("mouseHover");
+        }
+        
         
       } else {
         console.error(`Object with name ${objectName} not found.`);

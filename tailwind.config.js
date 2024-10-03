@@ -13,6 +13,8 @@ export default {
       animation: {
         "spin-slow": "spin 60s linear infinite", // slower spin
         fade: "fadeOut 0.5s ease",
+        "start" : "start 0.5s ease",
+        "end" : "end 0.8s ease"
       },
       // that is actual animation
       keyframes: (theme) => ({

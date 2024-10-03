@@ -73,6 +73,28 @@ const MeetTeam = () => {
           touch={true}
           interval={null}
           className="grow mx-auto  "
+          onSlide={()=>{
+            console.log(document.querySelectorAll(".description"));
+
+            // document.querySelectorAll(".description").forEach(v => v.classList.add("animate-end"));
+            // document.querySelectorAll(".description").forEach(v => v.classList.remove("animate-start"));
+            // document.querySelectorAll(".description").forEach(v => v.classList.add("animate-end"));
+
+          }}
+          onSlid={()=>{
+            // document.querySelectorAll(".description").forEach(v => v.classList.add("animate-start"));
+
+            // document.querySelectorAll(".description").forEach(v => v.classList.remove("animate-start"));
+            // document.querySelectorAll(".description").forEach(v => v.classList.add("animate-start"));
+            // document.querySelectorAll(".description").forEach(v => v.classList.remove("animate-end"));
+
+
+
+          }}
+          onSelect={()=>{
+            document.querySelectorAll(".description").forEach(v => v.classList.add("animate-end"));
+
+          }}
         >
           {info?.map((v, i) => (
             <CarouselItem>
@@ -98,7 +120,7 @@ const Card = ({ info }) => {
   const { name, designation, description, linkedIn, photo } = info;
   return (
     <div className="w-full flex flex-wrap-reverse lg:flex-nowrap justify-center lg:justify-between items-start lg:items-end mx-auto ">
-    <div className="text-lg lg:basis-1/2  pb-12">
+    <div  className="text-lg lg:basis-1/2 description  ">
         <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
     <div className="flex flex-col gap-4 lg:basis-1/2 sticky top-0 ">

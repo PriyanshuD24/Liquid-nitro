@@ -80,3 +80,34 @@ img {
   z-index: 20 !important; /* Ensure it stays above the background and particles */
   position: relative; /* Ensure z-index works */
 }
+
+@keyframes end {
+  from {
+    opacity: 0;
+    /* position: relative; */
+    top: 0px;
+    /* max-height: 1000px; */
+  }
+
+  50% {
+    opacity: 0;
+    position: relative;
+   /* max-height: 0px; */
+   top: 700px;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    /* max-height: 1000px; */
+    top: 0px;
+  }
+}
+
+@keyframes start {
+  from {
+    opacity: 1; /* 100% visibility */
+  }
+  to {
+    opacity: 0; /* 0% visibility */
+  }
+}

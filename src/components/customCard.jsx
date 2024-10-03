@@ -40,11 +40,11 @@ const CustomCard = ({ setScene, style, className, children }) => {
         />
       </div>
 
-      <div className={`p-4 w-full max-w-screen-lg mx-auto lg:mt-0 mt-14   ${className} `}>
+      <div className={`py-0 px-4 sm:p-4  w-full max-w-screen-lg mx-auto lg:mt-0 mt-14   sm:mb-0   ${className} `}>
         <div >{children}</div>
       </div>
 
-      <div className="flex justify-between fixed bottom-4 left-5 right-5 z-10">
+      <div className="flex justify-between fixed bottom-0 sm:bottom-4 left-5 right-5 z-10">
         <div className="flex gap-5">
         
 
@@ -57,7 +57,7 @@ const CustomCard = ({ setScene, style, className, children }) => {
 
       <div
         onClick={() => setScene(0)}
-        className="fixed top-20 right-5 size-10 cursor-pointer z-[1] hover:scale-90 transition-transform duration-300 "
+        className="fixed top-16 sm:top-20 right-5 size-10 cursor-pointer z-[1] hover:scale-90 transition-transform duration-300 "
       >
         <CrossIcon className="[&_path]:fill-gray-500 " />
       </div>
