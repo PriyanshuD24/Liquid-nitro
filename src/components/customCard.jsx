@@ -44,19 +44,22 @@ const CustomCard = ({ setScene, style, className, children }) => {
         <div >{children}</div>
       </div>
 
-      <div className="flex justify-between fixed bottom-4 left-5 right-5">
+      <div className="flex justify-between fixed bottom-4 left-5 right-5 z-10">
         <div className="flex gap-5">
-          <AudioIcon className="[&_path]:fill-gray-500 size-10" />
-          <ShareIcon className="[&_path]:fill-gray-500 size-10" />
+        
+
+          <AudioIcon className="[&_path]:fill-gray-500 size-10 cursor-pointer hover:scale-90 transition-transform duration-300  " />
+        
+          <ShareIcon className="[&_path]:fill-gray-500 size-10 cursor-pointer hover:scale-90 transition-transform duration-300" />
         </div>
-        <ExpandIcon className="[&_path]:fill-gray-500 size-10" />
+        <ExpandIcon className="[&_path]:fill-gray-500 size-10 hover:scale-90 transition-transform duration-300 " />
       </div>
 
       <div
         onClick={() => setScene(0)}
-        className="fixed top-20 right-5 size-10 cursor-pointer z-[1]"
+        className="fixed top-20 right-5 size-10 cursor-pointer z-[1] hover:scale-90 transition-transform duration-300 "
       >
-        <CrossIcon className="[&_path]:fill-gray-500" />
+        <CrossIcon className="[&_path]:fill-gray-500 " />
       </div>
     </div>
   );

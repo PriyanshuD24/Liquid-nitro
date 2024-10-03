@@ -5,7 +5,7 @@ import CustomCard from '../../components/customCard'
 
 const Int_NL02 = ({setScene}) => {
   return (
-    <CustomCard setScene={setScene} className={"overflow-y-scroll z-10"}>
+    <CustomCard setScene={setScene} className={"overflow-y-scroll z-10 theme-scroll"}>
     <MeetTeam/>
     </CustomCard>
   )

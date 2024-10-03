@@ -28,6 +28,8 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
   ];
 
   function triggerAnimation(objectName) {
+    console.log(objectName);
+    
     if (objectName) {
       setIsMenuOpen(false);
       const obj = splineData.findObjectById(objectName);
@@ -40,6 +42,25 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
       }
     } else {
       console.error("No object name provided.");
+    }
+  }
+
+  function triggerHoverEffect(objectName, isHovering) {
+    // console.log(objectName);
+
+    if (objectName) {
+      const obj = splineData.findObjectById(objectName);
+      console.log(obj);
+      
+      if (obj) {
+        obj.emitEvent(isHovering ? "mouseHover" : "");
+        // console.log("success");
+        
+      } else {
+        console.error(`Object with name ${objectName} not found.`);
+      }
+    } else {
+      console.error("No object name provided for hover effect.");
     }
   }
 
@@ -73,12 +94,14 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
         <div
           className={`text-white uppercase lg:w-auto w-full lg:block 
             ${isMenuOpen ? "" : "hidden"} lg:p-0 p-6 z-20`}>
-          <ul className="lg:flex text-center justify-between relative mt-20 lg:mt-0 text-xl lg:text-sm">
+          <ul className="lg:flex text-center justify-between relative mt-20 lg:mt-0 text-xl lg:text-sm gap-2">
             {menuItems.map((item) => (
               <li
                 key={item.page}
                 onClick={() => triggerAnimation(headData[currentPage][item.key])}
-                className={`md:px-4 md:py-2 lg:mb-0 mb-6 cursor-pointer ${
+                onMouseEnter={() => triggerHoverEffect(headData[currentPage][item.key], true)}
+                onMouseLeave={() => triggerHoverEffect(headData[currentPage][item.key], false)}
+                className={`md:px-4 md:py-2 lg:mb-0 mb-6 cursor-pointer hover:scale-[1.15] transition-transform duration-300 ${
                   currentPage === item.page ? "bg-indigo-500" : ""
                 }`}
                 role="button"

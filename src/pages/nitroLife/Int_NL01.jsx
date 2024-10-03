@@ -26,7 +26,7 @@ const Int_NL01 = ({ setScene }) => {
     };
   return (
     <CustomCard setScene={setScene} >
-      <div className="max-h-[70svh] overflow-y-scroll z-10  ">
+      <div className="max-h-[70svh] overflow-y-auto z-10  pr-2 ">
 
       <div className="text-xl md:text-3xl lg:text-4xl      text-white">Live. Create. Thrive. @Liquidnitro</div>
       <div className="flex justify-between items-center">

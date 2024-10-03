@@ -37,6 +37,8 @@ export const headData = [
 ];
 
 export function findIndexByValue(value) {
+  // console.log(value);
+  
   // First, find the key corresponding to the value
   let matchedKey = null;
   let matchedName = null;
@@ -57,6 +59,8 @@ export function findIndexByValue(value) {
   // Now, find the index of the object where the name matches the matched key
   if (matchedName) {
     const index = headData.findIndex((item) => item.name === matchedKey);
+    // console.log(index);
+    
     return index; // Return the final index
   }
 

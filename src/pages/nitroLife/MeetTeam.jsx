@@ -55,7 +55,7 @@ const MeetTeam = () => {
     // setIndex(index === 0 ? 3 : index - 1);
   };
   return (
-    <div className="space-y-4 sm:space-y-8 max-h-[70svh] text-white">
+    <div className="space-y-4 sm:space-y-8 max-h-[70svh] text-white ">
       <div className="text-xl md:text-3xl lg:text-4xl font-bold">
         Meet Our Team
       </div>
