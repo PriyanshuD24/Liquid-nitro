@@ -93,6 +93,8 @@ const MeetTeam = () => {
           }}
           onSelect={()=>{
             document.querySelectorAll(".description").forEach(v => v.classList.add("animate-end"));
+            document.querySelectorAll(".images").forEach(v => v.classList.add("animate-start"));
+
 
           }}
         >
@@ -124,8 +126,8 @@ const Card = ({ info }) => {
         <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
     <div className="flex flex-col gap-4 lg:basis-1/2 sticky top-0 ">
-      <div className="mx-auto">
-        <img src={photo} className="w-[300px] md:min-w-[450px] object-cover " alt="" />
+      <div  className="mx-auto animate-start images">
+        <img src={photo} className="w-[300px] md:min-w-[450px] object-cover  " alt="" />
       </div>
       <div className="space-y-2">
         <div className="text-xl md:text-3xl lg:text-4xl text-center">{name}</div>

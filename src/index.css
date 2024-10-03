@@ -105,9 +105,12 @@ img {
 
 @keyframes start {
   from {
-    opacity: 1; /* 100% visibility */
+    opacity: 0; /* 100% visibility */
+  }
+  50%{
+    opacity: 0;
   }
   to {
-    opacity: 0; /* 0% visibility */
+    opacity: 1; /* 0% visibility */
   }
 }
