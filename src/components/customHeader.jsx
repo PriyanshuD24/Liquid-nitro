@@ -50,7 +50,7 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
 
     if (objectName) {
       const obj = splineData.findObjectById(objectName);
-      console.log(obj);
+      // console.log(obj);
       
       if (obj) {
         obj.emitEvent(isHovering ? "mouseHover" : "");
