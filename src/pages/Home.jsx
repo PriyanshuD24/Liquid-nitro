@@ -78,6 +78,7 @@ export default function Home() {
       {/* ---------Reach Out----------- */}
       {sceneVar == "Idle_ROBC" && sendmail()}
       {sceneVar === "Idle_ROYC" && sendmail()}
+      {/* ------------NitroLife--------- */}
     </div>
   );
 }
