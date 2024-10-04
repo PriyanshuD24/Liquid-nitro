@@ -11,12 +11,12 @@ import Data from "../constants/particle.json";
 import CustomMobileCard from "./CustomMobileCard";
 
 const CustomCard = ({ setScene, style, className, children }) => {
-  // useEffect(() => {
-  //   // Initialize particles directly using the configuration object
-  //   if (window.particlesJS) {
-  //     window.particlesJS("particles-js", Data); // Direct initialization with the imported JSON object
-  //   }
-  // }, []);
+  useEffect(() => {
+    // Initialize particles directly using the configuration object
+    if (window?.particlesJS && width>640) {
+      window?.particlesJS("particles-js", Data); // Direct initialization with the imported JSON object
+    }
+  }, []);
   const [width, setWidth] = useState(window.innerWidth);
 
 
