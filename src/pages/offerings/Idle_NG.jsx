@@ -4,11 +4,11 @@ const Idle_NG = ({ setScene }) => {
   return (
     <CustomCard setScene={setScene}>
       <div className="h-[70svh] overflow-y-auto theme-scroll pb-10 z-10 relative">
-        <h2 className="text-2xl xl:text-5xl mb-10 text-white">
+        <h2 className="font-bold sm:font-normal text-2xl xl:text-5xl mb-4 sm:mb-10 text-white">
           LMTs & New Games
         </h2>
 
-        <h3 className="text-xl text-white font-medium mb-5">
+        <h3 className="text-xl text-white font-medium  mb-4 sm:mb-5">
           Successfully Launch New Games
           <br /> Create | Iterate | Test | Produce
         </h3>

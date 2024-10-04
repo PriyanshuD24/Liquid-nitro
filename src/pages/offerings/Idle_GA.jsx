@@ -4,9 +4,9 @@ const Idle_GA = ({ setScene, style }) => {
   return (
     <CustomCard setScene={setScene}>
       <div className="h-[70svh] overflow-y-auto theme-scroll pb-10 z-10 relative">
-        <h2 className="text-2xl xl:text-5xl mb-10 text-white">Geo Adaptation</h2>
+        <h2 className="text-2xl xl:text-5xl mb-4 font-bold sm:font-normal sm:mb-10 text-white">Geo Adaptation</h2>
 
-        <h3 className="text-xl text-white font-medium mb-5">
+        <h3 className="text-xl text-white font-medium mb-4 sm:mb-5">
           Culturalized features & content, Economy, targeted Live Services
         </h3>
         <div className="text-sm xl:text-lg text-white font-light space-y-5">
