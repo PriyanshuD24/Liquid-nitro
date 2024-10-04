@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainLoader from "./pages/loading/MainLoader";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -8,6 +9,10 @@ const App = () => {
       path: "/",
       element: <Home />,
     },
+    // {
+    //   path: "/loader",
+    //   element: <MainLoader />,
+    // },
   ]);
 
   return (

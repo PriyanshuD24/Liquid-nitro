@@ -15,7 +15,7 @@ import { findIndexByValue } from "../constants";
 import Int_NL01 from "./nitroLife/Int_NL01";
 import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
-import Loader from "./loading/Loader";
+import MainLoader from "./loading/MainLoader";
 
 
 export default function Home() {
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <div className="relative">
       {loading && (
-       <Loader/>
+       <MainLoader/>
       )}
       <CustomHeader splineData={splineData} setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <Spline

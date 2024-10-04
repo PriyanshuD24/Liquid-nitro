@@ -1,145 +1,136 @@
+.mainContainer {
+  background-color: #1d3047;
+  width: 100%;
+  height: 100svh;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  overflow: hidden;
+}
+
 .bgImg {
-    position: fixed;
-    z-index: -1;
-    display: flex;
-    width: 100vw;
-    height: 100svh;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid red; */
-    top: 0;
-    left: 0;
-    /* transform: translateX(-1/2); */
-    /* transform: translateY(-1/2); */
-  
-    
-    /* width: 100%;
-    height: 100vh; */
-    /* left: 27%; */
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  width: 100vw;
+  height: 100svh;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  top: 0;
+  left: 0;
+}
+
+.bgImg img {
+  width: 100%;
+  max-width: 100vh;
+  /* width: fit-content; */
+  /* height: 55%; */
+  opacity: 0.1;
+  object-fit: cover;
+  animation: rotate 25s linear infinite;
+  /* margin: auto; */
+  /* display: none; */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .bgImg img {
-    width: 100%;
-    max-width: 100vh;
-    /* width: fit-content; */
-    /* height: 55%; */
-    opacity: 0.1;
-    object-fit: cover;
-    animation: rotate 250s linear infinite;
-    /* margin: auto; */
-    /* display: none; */
+  to {
+    transform: rotate(360deg);
   }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+}
+
+.centre-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+}
+
+.centre-content img {
+  width: 100%;
+  /* min-width: 300px; */
+  margin-bottom: 10px;
+}
+
+.loading-container:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 4px;
+  background-color: white;
+  /* bottom: 0; */
+  left: 0;
+  top: 62px;
+  border-radius: 10px;
+  animation: movingLine 2.5s ease;
+  /* filter: blur(3px); */
+}
+
+@keyframes movingLine {
+  0% {
+    opacity: 0;
+    width: 0;
   }
-  
+
+  100% {
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+.counter {
+  color: white;
+  font-size: 54px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+
+/* @media only screen and (max-width: 900px) {
   .centre-content {
-    margin: auto;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* height: 100vh; */
-    /* flex-direction: column; */
-    width: 100%;
-    position: relative;
-    
-    
+    max-width: 100%; 
   }
-  
   .centre-content img {
-    width: 300px;
-    min-width: 300px;
-    margin-bottom: 15px;
+    width: 60%; 
   }
-  
   .loading-container {
-    /* width: 17.4%;
-    max-width: 100%;
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 51%;
-    right: 43.4%;
-    margin: 0 32px; */
-    width: 210px;
-    overflow: hidden;
-   height: 4px;
-    
+    width: 42%;
+    top: 50%;
+    right: 33.3%;
   }
-  
-  .loading-container:before {
-    content: "";
-    position: absolute;
-    width: 210px;
-    height: 4px;
-    background-color: white;
-    /* bottom: 0; */
-    /* left: 0; */
-    top: 62px;
-    border-radius: 10px;
-    animation: movingLine 2.5s ease;
-    /* filter: blur(3px); */
+} */
+
+@media only screen and (max-width: 480px) {
+  .centre-content img {
+    width: 85%;
   }
-  
+
+  .loading-container::before {
+    width: 60%;
+    left: 7%;
+    top: 37%;
+  }
+
+  .counter {
+    font-size: 3em;
+  }
+
   @keyframes movingLine {
     0% {
       opacity: 0;
-      width: 0px;
+      width: 0;
     }
-  
-   
+
     100% {
       opacity: 1;
-      width: 210px;
+      width: 60%;
     }
   }
-  
-  .counter {
-    color: white;
-    font-size: 54px;
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.1s ease-in-out;
-  }
-  
-  /* Add this to your CSS file */
-  
-  /* For small screens (max-width: 768px) */
-  @media only screen and (max-width: 900px) {
-    .centre-content {
-      max-width: 100%; /* Increase the maximum width for small screens */
-    }
-    .centre-content img {
-      width: 60%; /* Increase the width of the logo image for small screens */
-    }
-    .loading-container {
-      width: 42%;
-      top: 50%;
-      right: 33.3%;
-    }
-  }
-  
-  /* For extra small screens (max-width: 480px) */
-  @media only screen and (max-width: 480px) {
-    .centre-content img {
-      width: 90%;
-    }
-  
-    .loading-container {
-      width: 63%;
-      /* max-width: 63.3vw; */
-      top: 50%;
-      right: 23.3%;
-    }
-  
-    .counter {
-      font-size: 3em;
-    }
-  }
-  
+}
