@@ -13,6 +13,7 @@ import ArunPng from "../assets/imgs/Arunpng.png";
 import KrishnaPng from "../assets/imgs/Krishnapng.png";
 import SandeepPng from "../assets/imgs/Sandeeppng.png";
 import SureshPng from "../assets/imgs/Sureshpng.png";
+import { IoChevronBack } from "react-icons/io5";
 
 const TeamMember = ({ setScene }) => {
   var settings = {
@@ -58,7 +59,8 @@ const TeamMember = ({ setScene }) => {
   ];
 
   return (
-    <CustomCard setScene={setScene}>
+    <CustomCard setScene={setScene} className={"  max-h-[70svh] py-2 overflow-y-scroll z-20"}>
+
       <Slider {...settings}>
         {info.map((item, idx) => (
           <div
@@ -75,12 +77,12 @@ const TeamMember = ({ setScene }) => {
               <p className="text-sm xl:text-lg font-light">
                 {item.description}
               </p>
-              <div className="flex gap-5 items-center mt-3 italic w-full lg:justify-start justify-end">
-                Video
-                <div className="flex gap-2">
+              <div className="flex gap-5 items-center mt-3  w-fit mx-auto justify-center border-gray-500 border-[1px] px-2 py-1 rounded-xl bg-white bg-opacity-10 cursor-pointer ">
+              Play Video
+                {/* <div className="flex gap-2">
                   <AudioIcon className="[&_path]:fill-white size-10" />
                   <ShareIcon className="[&_path]:fill-white size-10" />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="flex flex-col items-center justify-center text-white lg:order-2 order-1 lg:w-1/2 w-full">
@@ -103,10 +105,10 @@ const NextArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute lg:-left-20 left-0 top-1/2 -translate-y-1/2 z-10"
+      className="fixed sm:absolute top-2/3 sm:top-1/2 -translate-y-1/2 text-2xl sm:text-4xl left-0 sm:-left-6    z-10  text-white"
       onClick={onClick}
     >
-      <ArrowIcon className="[&_path]:fill-gray-500 lg:size-10 size-5 -rotate-180" />
+      <IoChevronBack/>
     </div>
   );
 };
@@ -116,10 +118,11 @@ const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute lg:-right-20 right-0 top-1/2 -translate-y-1/2 z-10"
+      className="fixed sm:absolute top-2/3 sm:top-1/2 -translate-y-1/2 right-0 sm:-right-6 z-10  text-2xl sm:text-4xl rotate-180 text-white"
       onClick={onClick}
     >
-      <ArrowIcon className="[&_path]:fill-gray-500 lg:size-10 size-5" />
+      <IoChevronBack/>
+
     </div>
   );
 };

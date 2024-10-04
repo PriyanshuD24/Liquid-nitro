@@ -4,11 +4,11 @@ const Idle_NG = ({ setScene }) => {
   return (
     <CustomCard setScene={setScene}>
       <div className="h-[70svh] overflow-y-auto theme-scroll pb-10 z-10 relative">
-        <h2 className="text-2xl xl:text-5xl mb-10 text-white">
+        <h2 className="text-2xl xl:text-5xl mb-4 sm:mb-10 text-white font-bold sm:font-normal text-center sm:text-center">
           LMTs & New Games
         </h2>
 
-        <h3 className="text-xl text-white font-medium mb-5">
+        <h3 className="text-xl text-white mb-4 sm:mb-5 font-semibold sm:font-medium">
           Successfully Launch New Games
           <br /> Create | Iterate | Test | Produce
         </h3>
@@ -18,20 +18,23 @@ const Idle_NG = ({ setScene }) => {
             strategy, sports & core
             <br />
             <br />
-            Innovate & Test - Transform ideas/IPs into prototypes & limited
+           
+
+           <span className="font-semibold"> Innovate & Test</span> - Transform ideas/IPs into prototypes & limited
             market tests
             <br />
-            New Launches - Convert proven LMTs into AAA games
+           <span className="font-semibold "> New Launches</span> - Convert proven LMTs into AAA games
             <br />
-            Liquidnitro Platform - Leverage cost and production efficiencies at
+           <span className="font-semibold"> Liquidnitro Platform</span> - Leverage cost and production efficiencies at
             scale
             <br />
+          
           </p>
         </div>
 
-        <div className="text-sm xl:text-lg text-white font-light space-y-5 mt-10">
+        <div className="text-sm xl:text-lg text-white font-light sm:space-y-5 mt-4 sm:mt-10">
           <p>
-            Examples of what we've done
+           <span className="font-semibold sm:font-normal"> Examples of what we've done</span>
             <br />
             Conceptualized and fully produced a game mode for a Battle Royale
             FPS (a $1 billion IP)
@@ -46,17 +49,28 @@ const Idle_NG = ({ setScene }) => {
             multiplayer gameplay
             <br />
             <br />
-            Partner to test and launch new games
+          <div className="mt-3 font-semibold sm:font-normal">  Partner to test and launch new games</div>
             <br />
-            Rapid Prototyping Experts - Proven ability to quickly brainstorm,
+            <div className="space-y-2">
+<div>
+
+           <span className="font-semibold sm:font-normal"> Rapid Prototyping Experts</span> - Proven ability to quickly brainstorm,
             build and test prototypes across various genres (Casual, Sports,
             Strategy, Core etc)
-            <br />
-            Full Cycle Development - Seamlessly transform market tested
+</div>
+            {/* <br /> */}
+            <div>
+              
+           <span className="font-semibold sm:font-normal"> Full Cycle Development</span> - Seamlessly transform market tested
             prototypes into AAA quality productions
-            <br />
-            Collaborative and Agile - Flexible co-development models to
+            </div>
+            {/* <br /> */}
+            <div>
+
+           <span className="font-semibold sm:font-normal"> Collaborative and Agile</span> - Flexible co-development models to
             integrate into your existing teams and workflows
+            </div>
+            </div>
           </p>
         </div>
       </div>
