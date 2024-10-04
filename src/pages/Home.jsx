@@ -15,6 +15,7 @@ import { findIndexByValue } from "../constants";
 import Int_NL01 from "./nitroLife/Int_NL01";
 import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
+import Loader from "./loading/Loader";
 
 
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
   const mainCrystals = ["Int_AU", "Int_RO", "Int_NL", "Int_OF"];
 
   function onSplineMouseDown(e) {
-    // console.log(e.target.name);
+    console.log(e.target.name);
     setSceneVar(e.target.name);
     if (mainCrystals.some((a) => a === e.target.name)) {
       setCurrentPage(findIndexByValue(e.target.id));
@@ -50,16 +51,14 @@ export default function Home() {
   return (
     <div className="relative">
       {loading && (
-        <div className="fixed top-0 right-0 h-[100svh] w-screen z-50 flex justify-center items-center bg-white">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
-        </div>
+       <Loader/>
       )}
       <CustomHeader splineData={splineData} setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <Spline
         className="[&_canvas]:!h-[100svh]"
         onLoad={onLoad}
         onSplineMouseUp={onSplineMouseDown}
-        scene="https://prod.spline.design/UuPrPfDa3MWUCG1G/scene.splinecode"
+        scene="https://prod.spline.design/qKWI91V5r5MPadzz/scene.splinecode"
       />
 
       {/* -----------About Us Section----------- */}
