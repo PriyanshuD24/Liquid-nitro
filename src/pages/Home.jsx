@@ -17,7 +17,6 @@ import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
 import MainLoader from "./loading/MainLoader";
 
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [sceneVar, setSceneVar] = useState(0);
@@ -50,10 +49,13 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {loading && (
-       <MainLoader/>
-      )}
-      <CustomHeader splineData={splineData} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      {loading && <MainLoader />}
+
+      <CustomHeader
+        splineData={splineData}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
       <Spline
         className="[&_canvas]:!h-[100svh]"
         onLoad={onLoad}
@@ -85,7 +87,6 @@ export default function Home() {
       {sceneVar === "Int_NL01" && <Int_NL01 setScene={setSceneVar} />}
       {sceneVar === "Int_NL02" && <Int_NL02 setScene={setSceneVar} />}
       {sceneVar === "Int_NL03" && <Int_NL03 setScene={setSceneVar} />}
-      
     </div>
   );
 }
