@@ -25,11 +25,11 @@ const Int_NL01 = ({ setScene }) => {
         // setIndex(index === 0 ? 3 : index - 1);
     };
   return (
-    <CustomCard setScene={setScene} className={"overflow-y-auto z-10 "} >
+    <CustomCard setScene={setScene} className={" "} >
       <div className="max-h-[70svh]  pr-2 ">
 
-      <div className="text-xl md:text-3xl lg:text-4xl      text-white">Live. Create. Thrive. @Liquidnitro</div>
-      <div className="flex justify-between items-center">
+      <div className="text-xl md:text-3xl lg:text-4xl font-bold sm:font-normal text-center sm:text-left     text-white">Live. Create. Thrive. @Liquidnitro</div>
+      <div className="flex justify-between items-center gap-2">
         <div onClick={handlePrev} className=" z-20 cursor-pointer">
           <img
             src={back}
@@ -38,7 +38,7 @@ const Int_NL01 = ({ setScene }) => {
           />
         </div>
 
-        <Carousel wrap={true} touch={true} interval={2000}  className="basis-full font-bold  mx-auto my-10 ">
+        <Carousel wrap={true} touch={true} interval={2000}  className="basis-full font-bold  mx-auto my-4 sm:my-10 ">
           <CarouselItem  >
             <img src={Img1} className="h-[200px] w-[300px] sm:h-[50vh] sm:w-[80%] mx-auto rounded-xl object-cover " alt="" />
           </CarouselItem>

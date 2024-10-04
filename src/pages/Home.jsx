@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <div className="relative">
       {loading && (
-       <Loader/>
+     <div>Loading</div>
       )}
       <CustomHeader splineData={splineData} setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <Spline
