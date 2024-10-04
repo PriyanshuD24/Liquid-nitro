@@ -15,8 +15,7 @@ import { findIndexByValue } from "../constants";
 import Int_NL01 from "./nitroLife/Int_NL01";
 import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
-import Loader from "./loading/Loader";
-
+import MainLoader from "./loading/MainLoader";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -50,10 +49,13 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {loading && (
-     <div>Loading</div>
-      )}
-      <CustomHeader splineData={splineData} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      {loading && <MainLoader />}
+
+      <CustomHeader
+        splineData={splineData}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
       <Spline
         className="[&_canvas]:!h-[100svh]"
         onLoad={onLoad}
@@ -85,7 +87,6 @@ export default function Home() {
       {sceneVar === "Int_NL01" && <Int_NL01 setScene={setSceneVar} />}
       {sceneVar === "Int_NL02" && <Int_NL02 setScene={setSceneVar} />}
       {sceneVar === "Int_NL03" && <Int_NL03 setScene={setSceneVar} />}
-      
     </div>
   );
 }
