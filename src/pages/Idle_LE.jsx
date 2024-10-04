@@ -5,7 +5,7 @@ import CustomCard from "../components/customCard";
 const Idle_LE = ({ setScene , width}) => {
   return (
     <CustomCard setScene={setScene}>
-      <h2 className="text-2xl xl:text-5xl mb-4 sm:mb-10 lg:mb-20 text-white">Our Leadership Experience</h2>
+      <h2 className="text-2xl xl:text-5xl mb-4 sm:mb-10 lg:mb-20 text-white font-bold sm:font-normal">Our Leadership Experience</h2>
 
      {width>640 ?  <div className="grid md:grid-cols-2 lg:grid-cols-4 text-white gap-5 text-center">
         <div>
