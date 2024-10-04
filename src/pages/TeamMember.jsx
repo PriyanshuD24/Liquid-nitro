@@ -13,9 +13,8 @@ import ArunPng from "../assets/imgs/Arunpng.png";
 import KrishnaPng from "../assets/imgs/Krishnapng.png";
 import SandeepPng from "../assets/imgs/Sandeeppng.png";
 import SureshPng from "../assets/imgs/Sureshpng.png";
-import { FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 
-const TeamMember = ({ setScene ,width, idx}) => {
+const TeamMember = ({ setScene }) => {
   var settings = {
     infinite: true,
     arrow: false,
@@ -31,16 +30,14 @@ const TeamMember = ({ setScene ,width, idx}) => {
         "24+ years of experience in the games industry. Founded India's leading early games company and was the Studio Director for Electronic Arts India for over a decade. ",
       designation: "CEO",
       image: SandeepPng,
-      linkedIn : "https://www.linkedin.com/in/sandeepkowdley/"
     },
     {
       name: "Krishna Dhanekula",
       title: "Founder",
       description:
         "Operations Leader with 18+ years of expertise in financial strategy, operational controls and resource management. In his previous role, as Director of Operations, he managed multi-million dollar budgets and was responsible for driving financial rigor and profitability. ",
-      designation: "CFO",
+      designation: "Founder Member & CEO",
       image: KrishnaPng,
-      linkedIn: "https://www.linkedin.com/in/krishna-phani-dhanekula-06436128/"
     },
     {
       name: "Arun Kunchala",
@@ -49,7 +46,6 @@ const TeamMember = ({ setScene ,width, idx}) => {
         "20 years experience in the Games Industry and was the creative + product leader for EA's India studio for over 17 years. He led several game transitions and end to end live services for some of EA's biggest mobile games during his time. ",
       designation: "CPO",
       image: ArunPng,
-      linkedIn: "https://www.linkedin.com/in/arun-kunchala/"
     },
     {
       name: "Suresh Manthena",
@@ -58,13 +54,12 @@ const TeamMember = ({ setScene ,width, idx}) => {
         "Seasoned leader with 17+ years in the industry and spent over a decade at EA collaborating with executives and studios across the globe - spearheading ops for game transitions, assembling teams for diverse Mobile freemium games. ",
       designation: "COO",
       image: SureshPng,
-      linkedIn : "https://www.linkedin.com/in/sk-manthena/"
     },
   ];
 
   return (
     <CustomCard setScene={setScene}>
-    {width>640 ? <Slider {...settings}>
+      <Slider {...settings}>
         {info.map((item, idx) => (
           <div
             key={idx}
@@ -99,27 +94,6 @@ const TeamMember = ({ setScene ,width, idx}) => {
           </div>
         ))}
       </Slider>
-      :(
-        <div className="space-y-4">
-          <div className=" flex gap-2">
-          <div className="rounded-xl overflow-hidden" >
-            <img src={info[idx]?.image} alt="profile-logo" className="w-20 " />
-          </div>
-          <div className="space-y-2 pt-2">
-            <h2 className="text-xl font-bold text-nowrap">{info[idx]?.name}</h2>
-            <div className="space-x-2 flex gap-2 items-center">
-            <span className="border-gray-400 border-[1px] rounded-lg  px-1 py-[2px] "> {info[idx]?.designation}</span>
-           <span className="text-xl border-gray-400 border-[1px] rounded-lg  p-1 ">
-           <a href={info[idx]?.linkedIn} target="_blank">   <FaLinkedinIn/> 
-           </a></span>
-
-            </div>
-          </div>
-          </div>
-          <div>{info[idx]?.description}</div>
-        </div>
-      )
-      }
     </CustomCard>
   );
 };

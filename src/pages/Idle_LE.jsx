@@ -1,13 +1,12 @@
 import React from "react";
 import CustomCard from "../components/customCard";
 
-
-const Idle_LE = ({ setScene , width}) => {
+const Idle_LE = ({ setScene }) => {
   return (
     <CustomCard setScene={setScene}>
-      <h2 className="text-2xl xl:text-5xl mb-4 sm:mb-10 lg:mb-20 text-white font-bold sm:font-normal">Our Leadership Experience</h2>
+      <h2 className="text-2xl xl:text-5xl mb-10 lg:mb-20 text-white">Our Leadership Experience</h2>
 
-     {width>640 ?  <div className="grid md:grid-cols-2 lg:grid-cols-4 text-white gap-5 text-center">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 text-white gap-5 text-center">
         <div>
           <h2 className="text-xl md:text-4xl font-semibold mb-5">18+</h2>
           <p className="text-sm md:text-lg">
@@ -38,12 +37,6 @@ const Idle_LE = ({ setScene , width}) => {
           </p>
         </div>
       </div>
-    : (
-      <div>
-        <p>We believe in nurturing excellence. That means equipping our team with cutting-edge projects and the finest tools. But more importantly, it means fostering an environment of freedom and support. This empowers them to unleash their full potential and create works that leave a lasting impact.</p>
-      </div>
-    )  
-    }
     </CustomCard>
   );
 };

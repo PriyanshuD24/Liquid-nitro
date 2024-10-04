@@ -4,16 +4,16 @@ const Idle_LG = ({ setScene }) => {
   return (
     <CustomCard setScene={setScene}>
       <div className="h-[70svh] overflow-y-auto theme-scroll pb-10 z-10 relative">
-        <h2 className=" sm:font-normal font-bold text-2xl xl:text-5xl mb-4 sm:mb-10 text-white">
+        <h2 className="text-2xl xl:text-5xl mb-10 text-white">
           {" "}
           End-to-End Live Services
         </h2>
 
-        <h3 className="text-xl text-white font-medium mb-4 sm:mb-5">
+        <h3 className="text-xl text-white font-medium mb-5">
           New features & content, quality of life improvements - driving growth
           of AERM metrics
         </h3>
-        <div className="text-sm xl:text-lg text-white font-light space-y-4 sm:space-y-5 sm:px-5">
+        <div className="text-sm xl:text-lg text-white font-light space-y-5 px-5">
           <p>
             Experience across genres
             <br />
@@ -23,10 +23,10 @@ const Idle_LG = ({ setScene }) => {
             production Licensor management <br />
           </p>
         </div>
-        <h3 className="text-xl text-white font-medium mb-4 mt-4 sm:mb-5 sm:mt-10">
+        <h3 className="text-xl text-white font-medium mb-5 mt-10">
           We partner to drive growth and profitability
         </h3>
-        <div className="text-sm xl:text-lg text-white font-light space-y-4 sm:space-y-5 sm:px-5">
+        <div className="text-sm xl:text-lg text-white font-light space-y-5 px-5">
           <p>
             Team Chemistry: cross functional teams with a deep understanding of
             Players, motivations and the game/brand Data driven insights, player
@@ -44,10 +44,10 @@ const Idle_LG = ({ setScene }) => {
             <br />
           </p>
         </div>
-        <h3 className="text-xl text-white font-medium  mb-4 mt-4 sm:mb-5 sm:mt-10">
+        <h3 className="text-xl text-white font-medium mb-5 mt-10">
           Examples of what we've done
         </h3>
-        <div className="text-sm xl:text-lg text-white font-light space-y-4 sm:space-y-5 sm:px-5">
+        <div className="text-sm xl:text-lg text-white font-light space-y-5 px-5">
           <p>
             Clocked over $280M on a Match-3 game post transition.
             <br />

@@ -13,8 +13,6 @@ export default {
       animation: {
         "spin-slow": "spin 60s linear infinite", // slower spin
         fade: "fadeOut 0.5s ease",
-        fadeCard: "fadeOut 0.2s ease",
-
         "start" : "start 1s ease",
         "end" : "end 0.8s ease",
         "card" : "card 0.5s ease"

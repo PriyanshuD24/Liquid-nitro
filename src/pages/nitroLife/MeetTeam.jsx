@@ -74,7 +74,7 @@ const MeetTeam = () => {
           interval={null}
           className="grow mx-auto  "
           onSlide={()=>{
-            // console.log(document.querySelectorAll(".description"));
+            console.log(document.querySelectorAll(".description"));
 
             // document.querySelectorAll(".description").forEach(v => v.classList.add("animate-end"));
             // document.querySelectorAll(".description").forEach(v => v.classList.remove("animate-start"));
