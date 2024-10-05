@@ -40,7 +40,7 @@ export default function Home() {
   const mainCrystals = ["Int_AU", "Int_RO", "Int_NL", "Int_OF"];
 
   function onSplineMouseDown(e) {
-    console.log(e.target.name);
+    console.log(e.target);
     setSceneVar(e.target.name);
     if (mainCrystals.some((a) => a === e.target.name)) {
       setCurrentPage(findIndexByValue(e.target.id));
