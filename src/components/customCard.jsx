@@ -60,7 +60,7 @@ const CustomCard = ({ setScene, style, className, children }) => {
         zIndex: 50,
       }}
         onClick={() => setScene(0)}
-        className="fixed top-16 sm:top-20 right-5 size-10 cursor-pointer !z-50 hover:scale-90 transition-transform duration-300 "
+        className="fixed top-16 sm:top-24 right-5 size-10 cursor-pointer !z-50 hover:scale-90 transition-transform duration-300 "
       >
         <CrossIcon className="[&_path]:fill-gray-500 !z-50 " />
       </div>

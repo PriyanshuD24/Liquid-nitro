@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import  back  from "../../assets/icons/arrow.svg";
 import { Anton, anurag, nitin, sarvanan, siva } from "../../assets/founders";
 import Linkedin from "../../assets/icons/LinkedIn.png";
+import { IoChevronBack } from "react-icons/io5";
+
 
 const MeetTeam = ({info, fullInfo, setClicked}) => {
 
@@ -20,7 +22,7 @@ const MeetTeam = ({info, fullInfo, setClicked}) => {
 
   }, []);
 
-console.log(screenWidth);
+// console.log(screenWidth);
 
 
 
@@ -71,12 +73,13 @@ console.log(screenWidth);
         More Team Members
       </div>
       <div className="flex justify-between items-center relative">
-        <div onClick={handlePrev} className=" z-20 cursor-pointer ">
-          <img
+        <div onClick={handlePrev} className=" z-20 cursor-pointer text-2xl sm:text-4xl ">
+          {/* <img
             src={back}
             alt="prev"
             className="min-w-6 w-6 md:min-w-8 md:w-8 lg:min-w-10 lg:w-10 rotate-180  opacity-50 "
-          />
+          /> */}
+          <IoChevronBack/>
         </div>
         
         <Carousel
@@ -97,12 +100,9 @@ console.log(screenWidth);
         </CarouselItem>
       ))}
         </Carousel>
-        <div onClick={handleNext} className=" z-20 cursor-pointer  relative ">
-          <img
-            src={back}
-            alt="prev"
-            className="min-w-6 w-6 md:min-w-8 md:w-8 lg:min-w-10 lg:w-10 opacity-50"
-          />
+        <div onClick={handleNext} className=" z-20 cursor-pointer text-2xl sm:text-4xl rotate-180  relative ">
+        <IoChevronBack/>
+          
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ console.log(screenWidth);
 };
 
 const Card = ({ info }) => {
-  console.log(info);
+  // console.log(info);
 
   const { name, designation, description, linkedIn, photo } = info;
   return (
