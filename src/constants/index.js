@@ -7,6 +7,7 @@ export const headData = [
     offerings: "7e703f97-1dba-413d-9977-95061b2129b6",
   },
   {
+    
     name: "about",
     about: "",
     reachOut: "026474b2-73af-41aa-abe8-a80d5fc44f88",
@@ -37,7 +38,7 @@ export const headData = [
 ];
 
 export function findIndexByValue(value) {
-  // console.log(value);
+  console.log(value, "value in func");
   
   // First, find the key corresponding to the value
   let matchedKey = null;
@@ -55,7 +56,9 @@ export function findIndexByValue(value) {
     }
     if (matchedKey) break;
   }
-
+  // if (matchedName === "Home") {
+  //   return 0; // Return the index for "Home"
+  // }
   // Now, find the index of the object where the name matches the matched key
   if (matchedName) {
     const index = headData.findIndex((item) => item.name === matchedKey);

@@ -40,7 +40,9 @@ const CustomCard = ({ setScene, style, className, children }) => {
         />
       </div>
 
-      <div className={` px-4 sm:p-2  w-full max-w-screen-lg mx-auto lg:mt-0 mt-14   sm:mb-0    ${className} `}>
+      <div 
+    
+      className={` px-4 sm:py-2  w-full max-w-screen-lg mx-auto lg:mt-0 mt-14   font-pointBlack   ${className} `}>
         <div >{children}</div>
       </div>
 

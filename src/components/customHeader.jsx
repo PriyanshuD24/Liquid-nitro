@@ -6,9 +6,11 @@ import ReactLogo from "../assets/icons/Shatkona-SVG.svg?react";
 import AuroraBg from "../assets/imgs/Gradient Aurora web png@0.75x.png";
 import Data from "../constants/particle.json";
 import { headData, findIndexByValue } from "../constants";
+import { useNavigate } from "react-router-dom";
 
 const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,18 +24,20 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
 
   const menuItems = [
     { label: "About us", key: "about", page: 1 },
-    { label: "Reach out", key: "reachOut", page: 2 },
     { label: "Offerings", key: "offerings", page: 3 },
     { label: "Nitro Life", key: "nitroLife", page: 4 },
+    { label: "Reach out", key: "reachOut", page: 2 },
   ];
 
   function triggerAnimation(objectName) {
-    console.log(objectName);
+    console.log(objectName, "trigger animation");
     
     if (objectName) {
       setIsMenuOpen(false);
       const obj = splineData.findObjectById(objectName);
       if (obj) {
+        console.log(obj, "tA obj");
+        
         obj.emitEvent("mouseUp");
         findIndexByValue(objectName);
         setCurrentPage(findIndexByValue(objectName));
@@ -89,7 +93,9 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
 
       <div className="lg:h-18 mx-auto container flex items-center justify-between flex-wrap lg:flex-nowrap md:px-8 px-4 md:px-auto py-4">
         {/* Logo */}
-        <div className="lg:w-48 sm:w-40 w-36 hover:scale-[1.15] transition-transform duration-300">
+        <div className="lg:w-48 sm:w-40 w-36 hover:scale-[1.15] transition-transform duration-300"
+       onClick={() =>navigate("/") }
+        >
           <img src={MainLogo} />
         </div>
         <Icon
