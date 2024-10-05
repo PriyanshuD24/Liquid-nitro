@@ -28,7 +28,7 @@ const ReactOut = ({setScene}) => {
       </div>
       </div>
         </div>
-    <p className='mt-4 mb-3 sm:block hidden'>You can visit at:</p>
+    <p className='mt-4 mb-3 sm:block hidden text-xl font-bold '>You can visit at:</p>
     <p className=' sm:block hidden'>THE DISTRICT <br />
     5th floor, The District, Myscape Rd, Financial District, <br /> Nanakramguda, Telangana 500032</p>
 </div>
