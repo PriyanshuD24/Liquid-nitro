@@ -89,7 +89,7 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
 
       <div className="lg:h-18 mx-auto container flex items-center justify-between flex-wrap lg:flex-nowrap md:px-8 px-4 md:px-auto py-4">
         {/* Logo */}
-        <div className="lg:w-48 sm:w-40 w-36">
+        <div className="lg:w-48 sm:w-40 w-36 hover:scale-[1.15] transition-transform duration-300">
           <img src={MainLogo} />
         </div>
         <Icon
@@ -107,8 +107,8 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
                 onClick={() => triggerAnimation(headData[currentPage][item.key])}
                 onMouseEnter={() => triggerHoverEffect(headData[currentPage][item.key], true)}
                 onMouseLeave={() => triggerHoverEffect(headData[currentPage][item.key], false)}
-                className={`md:px-4 md:py-2 lg:mb-0 mb-6 cursor-pointer hover:scale-[1.15] transition-transform duration-300 ${
-                  currentPage === item.page ? "bg-indigo-500" : ""
+                className={`md:px-4 md:py-2 lg:mb-0 mb-6 cursor-pointer hover:scale-[1.15] transition-all hover:font-bold   text-base sm:text-lg  duration-300 ${
+                  currentPage === item.page ? "scale-[1.15] font-bold " : ""
                 }`}
                 role="button"
                 tabIndex={0}>
