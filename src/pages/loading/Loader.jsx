@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./loader.css";
-// import Starfield from "react-starfield";
+import backgroundImg  from "../../assets/loading/backgroundImg.svg";
+import logo  from "../../assets/loading/logo.svg";
 
 const Loader = () => {
   const [counter, setCounter] = useState(0);
@@ -28,11 +29,11 @@ const Loader = () => {
           }}
           className="bgImg"
         >
-          <img src="../../../src/assets/loading/backgroundImg.svg" alt="background" />
+          <img src={backgroundImg} alt="background" />
         </div>
 
         <div className="centre-content">
-          <img src="../../../src/assets/loading/logo.svg" alt="logo" />
+          <img src={logo} alt="logo" />
           <div className="loading-container"></div>
           <div className="counter">{counter}%</div>
         </div>
