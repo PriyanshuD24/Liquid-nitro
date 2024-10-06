@@ -16,6 +16,8 @@ import Int_NL01 from "./nitroLife/Int_NL01";
 import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
 import Loader from "./loading/Loader";
+import MainLoader from "./loading/MainLoader";
+import ReactOut from "./reachOut/ReactOut";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -40,7 +42,7 @@ export default function Home() {
   const mainCrystals = ["Int_AU", "Int_RO", "Int_NL", "Int_OF"];
 
   function onSplineMouseDown(e) {
-    console.log(e.target.name);
+    console.log(e.target,"---------");
     setSceneVar(e.target.name);
     if (mainCrystals.some((a) => a === e.target.name)) {
       setCurrentPage(findIndexByValue(e.target.id));
@@ -82,7 +84,7 @@ export default function Home() {
 
       {/* ---------Reach Out----------- */}
       {sceneVar == "Idle_ROBC" && sendmail()}
-      {sceneVar === "Idle_ROYC" && sendmail()}
+      {sceneVar === "Idle_ROYC" && <ReactOut setScene={setSceneVar}/>}
       {/* ------------NitroLife--------- */}
       {sceneVar === "Int_NL01" && <Int_NL01 setScene={setSceneVar} />}
       {sceneVar === "Int_NL02" && <Int_NL02 setScene={setSceneVar} />}

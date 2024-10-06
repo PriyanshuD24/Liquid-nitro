@@ -129,3 +129,10 @@ img {
     /* max-height: 1000px; */
   }
 }
+
+@font-face {
+  font-family: 'PointBlack';
+  src: url('./assets/point/PointBlack.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

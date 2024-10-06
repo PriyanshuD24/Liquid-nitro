@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        pointBlack: ['PointBlack', 'sans-serif'],
+      },
       colors: {
         bgColor: "#080a1a",
         primary: "#00bfff",
