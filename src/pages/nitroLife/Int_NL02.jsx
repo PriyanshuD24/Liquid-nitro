@@ -110,7 +110,7 @@ const Int_NL02 = ({setScene}) => {
  </CustomCard>
     )
     : (
-<CustomCard setScene={setClicked} className={"z-10 overflow-y-scroll"}>
+<CustomCard setScene={setClicked} className={"z-10 overflow-y-auto"}>
   <MeetTeam info={clicked} fullInfo= {info } setClicked={setClicked}/>
 </CustomCard>
     )

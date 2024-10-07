@@ -65,7 +65,7 @@ const TeamMember = ({ setScene }) => {
         {info.map((item, idx) => (
           <div
             key={idx}
-            className="!flex flex-wrap text-white justify-center items-center"
+            className="!flex flex-wrap text-white justify-center items-center "
           >
             <h2 className="text-3xl font-medium xl:text-7xl lg:hidden block w-full mb-3 text-center">
               {item.title}
