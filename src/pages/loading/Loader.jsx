@@ -11,11 +11,11 @@ const Loader = () => {
     const intervalId = setInterval(() => {
       setCounter((prevCounter) => {
         if (prevCounter < 100) {
-          return prevCounter + 2;
+          return prevCounter + 4;
         }
         return prevCounter;
       });
-    }, 10);
+    }, 1);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -23,11 +23,7 @@ const Loader = () => {
   return (
     <>
       <div className="mainContainer">
-        <Starfield
-          speedFactor={0.2}
-          starCount={7000}
-          starSize={20}
-        />
+        <Starfield speedFactor={0.2} starCount={7000} starSize={20} />
         <div
           style={{
             position: "fixed",
