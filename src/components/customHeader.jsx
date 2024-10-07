@@ -32,13 +32,13 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
   ];
 
   function triggerAnimation(objectName) {
-    console.log(objectName, "trigger animation");
+    // console.log(objectName, "trigger animation");
     
     if (objectName) {
       setIsMenuOpen(false);
       const obj = splineData.findObjectById(objectName);
       if (obj) {
-        console.log(obj, "tA obj");
+        // console.log(obj, "tA obj");
         
         obj.emitEvent("mouseUp");
         findIndexByValue(objectName);
