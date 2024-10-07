@@ -80,14 +80,16 @@ setFirstClick(false);
 
 
   return (
-    <div className="relative">
-      {loading && <Loader />}
+    <div className="relative font-pointBlack">
+      {loading &&(
+      <Loader/>
+      )}
 
-      <CustomHeader
+      {/* <CustomHeader
         splineData={splineData}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-      />
+      /> */}
       <Spline
         className="[&_canvas]:!h-[100svh]"
         onLoad={onLoad}
