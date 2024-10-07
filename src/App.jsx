@@ -1,14 +1,19 @@
 import React from "react";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainLoader from "./pages/loading/MainLoader";
 import AudioProvider from "./components/AudioContext";
+import Loader from "./pages/loading/Loader";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AudioProvider> <Home /> </AudioProvider>,
+      element: (
+        <AudioProvider>
+          {" "}
+          <Home />{" "}
+        </AudioProvider>
+      ),
     },
   ]);
 

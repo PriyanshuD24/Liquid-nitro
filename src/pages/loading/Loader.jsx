@@ -4,7 +4,7 @@ import backgroundImg from "../../assets/loading/backgroundImg.svg";
 import logo from "../../assets/loading/logo.svg";
 import Starfield from "react-starfield";
 
-const Loader = () => {
+const Loader = ({ progress }) => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
@@ -36,8 +36,20 @@ const Loader = () => {
 
         <div className="centre-content">
           <img src={logo} alt="logo" />
-          <div className="loading-container"></div>
-          <div className="counter">{counter}%</div>
+          <div
+            style={{
+              width: "70%",
+              position: "absolute",
+              left: "0",
+              top: "62px",
+            }}
+          >
+            <div
+              className="loading-container"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+          <div className="counter">{progress}%</div>
         </div>
       </div>
     </>

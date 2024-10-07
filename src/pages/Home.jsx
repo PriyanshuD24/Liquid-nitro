@@ -17,16 +17,17 @@ import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
 import Loader from "./loading/Loader";
 import ReactOut from "./reachOut/ReactOut";
-import Music from "../assets/bgMusic/sound.mp3"
+import Music from "../assets/bgMusic/sound.mp3";
 import { AudioContext } from "../components/AudioContext";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
   const [sceneVar, setSceneVar] = useState(0);
   const [splineData, setSplineData] = useState({});
   const [currentPage, setCurrentPage] = useState(0);
-  const [firstClick , setFirstClick] = useState(true);
-  const {playAudio ,setPlayAudio} = useContext(AudioContext);
+  const [firstClick, setFirstClick] = useState(true);
+  const { playAudio, setPlayAudio } = useContext(AudioContext);
 
   function sendmail() {
     window.location.href = "mailto:contact@liquidnitrogames.com";
@@ -37,51 +38,66 @@ export default function Home() {
     spline.setGlobalEvents(true);
 
     if (spline?._data?.scene) {
-      setLoading(false);
+      setProgress(100);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
       setSplineData(spline);
     }
   }
 
+  useEffect(() => {
+    if (loading) {
+      const interval = setInterval(() => {
+        setProgress((prevProgress) => {
+          if (prevProgress < 100) {
+            const increment = Math.floor(Math.random() * 10) + 1;
+            return Math.min(prevProgress + increment, 100);
+          }
+          return prevProgress;
+        });
+      }, 300);
+
+      return () => clearInterval(interval);
+    }
+  }, [loading]);
+
   const mainCrystals = ["Int_AU", "Int_RO", "Int_NL", "Int_OF"];
 
   function onSplineMouseDown(e) {
-    console.log(e.target,"---------");
+    console.log(e.target, "---------");
     setSceneVar(e.target.name);
     if (mainCrystals.some((a) => a === e.target.name)) {
       setCurrentPage(findIndexByValue(e.target.id));
     }
   }
-  useEffect(()=> {
+  useEffect(() => {
     const handleBodyClick = () => {
-     
-      if(firstClick){
+      if (firstClick) {
         // console.log("First click on the document detected!");
         // Play music
         setPlayAudio(true);
-       
-setFirstClick(false);
+
+        setFirstClick(false);
       }
-      
+
       // Mark the first click as complete
-     
+
       // console.log("Document clicked!");
     };
 
     // Attach the event listener to the body (or document)
-    document.body.addEventListener('click', handleBodyClick);
+    document.body.addEventListener("click", handleBodyClick);
 
     // Cleanup the event listener when the component unmounts
     return () => {
-      document.body.removeEventListener('click', handleBodyClick);
+      document.body.removeEventListener("click", handleBodyClick);
     };
-  },[firstClick])
-
-
-
+  }, [firstClick]);
 
   return (
     <div className="relative">
-      {loading && <Loader />}
+      {loading && <Loader progress={progress} />}
 
       <CustomHeader
         splineData={splineData}
@@ -114,7 +130,7 @@ setFirstClick(false);
 
       {/* ---------Reach Out----------- */}
       {sceneVar == "Idle_ROBC" && sendmail()}
-      {sceneVar === "Idle_ROYC" && <ReactOut setScene={setSceneVar}/>}
+      {sceneVar === "Idle_ROYC" && <ReactOut setScene={setSceneVar} />}
       {/* ------------NitroLife--------- */}
       {sceneVar === "Int_NL01" && <Int_NL01 setScene={setSceneVar} />}
       {sceneVar === "Int_NL02" && <Int_NL02 setScene={setSceneVar} />}
