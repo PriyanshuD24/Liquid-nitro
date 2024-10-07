@@ -115,7 +115,7 @@ const Card = ({ info }) => {
   const { name, designation, description, linkedIn, photo } = info;
   return (
     <div className="w-full flex flex-wrap-reverse lg:flex-nowrap justify-center lg:justify-between items-start lg:items-end mx-auto">
-    <div  className="text-lg lg:basis-1/2 description  lg:overflow-y-scroll lg:max-h-[310px] ">
+    <div  className="text-lg lg:basis-1/2 description  lg:overflow-y-scroll theme-scroll lg:max-h-[310px] ">
         <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
     <div className="flex flex-col gap-4 lg:basis-1/2  ">

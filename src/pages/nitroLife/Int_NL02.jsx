@@ -88,7 +88,7 @@ const Int_NL02 = ({setScene}) => {
     { clicked == 0 ? (
  <CustomCard setScene={setScene} className={` z-10 `}>
 
- <div className={`flex flex-wrap justify-center  gap-4 sm:gap-10  h-[70svh] ${clicked!=0 ? "overflow-y-hidden" :  "overflow-y-auto"} text-white`}>
+ <div className={`flex flex-wrap justify-center  gap-4 sm:gap-10  h-[70svh] theme-scroll ${clicked!=0 ? "overflow-y-hidden" :  "overflow-y-auto"} text-white`}>
  {info?.map((val,idx)=> {
    if(more){
      

@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AuroraBg from "../assets/imgs/Gradient Aurora web png@0.75x.png";
 import MainBg from "../assets/imgs/BG with stars@0.75x.png";
 import ReactLogo from "../assets/icons/Shatkona-SVG.svg?react";
 import CrossIcon from "../assets/icons/Cross Button.svg?react";
 
 import AudioIcon from "../assets/icons/Audio.svg?react";
+import AudioOff from "../assets/icons/AudioOff.svg";
+import AudioOn from "../assets/icons/AudioOn.svg";
+import AudioRight from "../assets/icons/AudioRight.svg";
+
 import ShareIcon from "../assets/icons/Share.svg?react";
 import ExpandIcon from "../assets/icons/expand.svg?react";
 import Data from "../constants/particle.json";
+import Social0 from "../assets/icons/Social Icons.svg";
+import Social1 from "../assets/icons/Social Icons-1.svg";
+import Social2 from "../assets/icons/Social Icons-2.svg";
+import Social3 from "../assets/icons/Social Icons-3.svg";
+import { AudioContext } from "./AudioContext";
 
 const CustomCard = ({ setScene, style, className, children }) => {
+  const [hover, setHover] = useState(false);
+  const {playAudio ,setPlayAudio} = useContext(AudioContext);
   useEffect(() => {
     // Initialize particles directly using the configuration object
     if (window.particlesJS) {
@@ -40,27 +51,49 @@ const CustomCard = ({ setScene, style, className, children }) => {
         />
       </div>
 
-      <div 
-    
-      className={` px-4 sm:py-2  w-full max-w-screen-lg mx-auto lg:mt-0 mt-14   font-pointBlack   ${className} `}>
-        <div >{children}</div>
+      <div
+        className={` px-4 sm:py-2  w-full max-w-screen-lg mx-auto lg:mt-0 mt-14 theme-scroll   font-pointBlack   ${className} `}
+      >
+        <div>{children}</div>
       </div>
 
-      <div className="flex justify-between fixed bottom-0 sm:bottom-4 left-5 right-5 z-10">
+      <div className="flex justify-between fixed bottom-0 sm:bottom-4 left-5 right-5 z-10 pb-2">
         <div className="flex gap-5">
-        
+          <div
+          onClick={()=>setPlayAudio(!playAudio)}
+          >
+            <img
+              src={playAudio?AudioOn :AudioOff}
+              alt=""
+              className="w-10 hover:scale-90 cursor-pointer transition-transform duration-300"
+            />
+          </div>
+          <div 
+          onMouseEnter={()=> setHover(true)}
+          onMouseLeave={()=> setHover(false)}
+          className="flex items-center gap-3">
+          
 
-          <AudioIcon className="[&_path]:fill-gray-500 size-10 cursor-pointer hover:scale-90 transition-transform duration-300  " />
+              <img
+                src={AudioRight}
+                alt=""
+                className="w-10 hover:scale-90 cursor-pointer transition-transform duration-300 "
+              />
+            <SocialMedia hover={hover} />
+
         
-          <ShareIcon className="[&_path]:fill-gray-500 size-10 cursor-pointer hover:scale-90 transition-transform duration-300" />
+          </div>
+          {/* <AudioIcon className="[&_path]:fill-gray-500 size-10 cursor-pointer hover:scale-90 transition-transform duration-300  " />
+        
+          <ShareIcon className="[&_path]:fill-gray-500 size-10 cursor-pointer hover:scale-90 transition-transform duration-300" /> */}
         </div>
         <ExpandIcon className="[&_path]:fill-gray-500 size-10 hover:scale-90 transition-transform duration-300 " />
       </div>
 
       <div
-      style={{
-        zIndex: 50,
-      }}
+        style={{
+          zIndex: 50,
+        }}
         onClick={() => setScene(0)}
         className="fixed top-16 sm:top-24 right-5 size-10 cursor-pointer !z-50 hover:scale-90 transition-transform duration-300 "
       >
@@ -71,3 +104,38 @@ const CustomCard = ({ setScene, style, className, children }) => {
 };
 
 export default CustomCard;
+
+const SocialMedia = ({hover}) => {
+  return (
+    <div className={`items-center flex gap-3 `}>
+      <div>
+        <img
+          src={Social0}
+          alt="x"
+          className={` hover:cursor-pointer hover:scale-95 transition-all duration-300 max-w-0 opacity-0 ${hover && "max-w-5 opacity-100"}`}
+        />
+      </div>
+      <div>
+        <img
+          src={Social1}
+          alt="fb"
+          className={` hover:cursor-pointer hover:scale-95 transition-all duration-300 max-w-0 opacity-0 ${hover && "max-w-5 opacity-100"}`}
+        />
+      </div>
+      <div>
+        <img
+          src={Social2}
+          alt="in"
+          className={` hover:cursor-pointer hover:scale-95 transition-all duration-300 max-w-0 opacity-0 ${hover && "max-w-5 opacity-100"}`}
+        />
+      </div>
+      <div>
+        <img
+          src={Social3}
+          alt="insta"
+          className={` hover:cursor-pointer hover:scale-95 transition-all duration-300 max-w-0 opacity-0 ${hover && "max-w-5 opacity-100"}`}
+        />
+      </div>
+    </div>
+  );
+};
