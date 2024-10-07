@@ -10,15 +10,14 @@ const App = () => {
       path: "/",
       element: <AudioProvider> <Home /> </AudioProvider>,
     },
-    // {
-    //   path: "/loader",
-    //   element: <MainLoader />,
-    // },
   ]);
 
   return (
     <>
-      <div id="landscape-warning">This website is not optimized for landscape mode. Please switch to portrait mode.</div>
+      <div id="landscape-warning">
+        This website is not optimized for landscape mode. Please switch to
+        portrait mode.
+      </div>
       <div id="app-content">
         <RouterProvider router={router} />
       </div>

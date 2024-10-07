@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./loader.css";
-import backgroundImg  from "../../assets/loading/backgroundImg.svg";
-import logo  from "../../assets/loading/logo.svg";
+import backgroundImg from "../../assets/loading/backgroundImg.svg";
+import logo from "../../assets/loading/logo.svg";
+import Starfield from "react-starfield";
 
 const Loader = () => {
   const [counter, setCounter] = useState(0);
@@ -14,7 +15,7 @@ const Loader = () => {
         }
         return prevCounter;
       });
-    }, 5);
+    }, 10);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -22,6 +23,11 @@ const Loader = () => {
   return (
     <>
       <div className="mainContainer">
+        <Starfield
+          speedFactor={0.2}
+          starCount={7000}
+          starSize={20}
+        />
         <div
           style={{
             position: "fixed",

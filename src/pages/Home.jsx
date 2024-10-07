@@ -15,7 +15,7 @@ import { findIndexByValue } from "../constants";
 import Int_NL01 from "./nitroLife/Int_NL01";
 import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
-import MainLoader from "./loading/MainLoader";
+import Loader from "./loading/Loader";
 import ReactOut from "./reachOut/ReactOut";
 import Music from "../assets/bgMusic/sound.mp3"
 import { AudioContext } from "../components/AudioContext";
@@ -81,7 +81,7 @@ setFirstClick(false);
 
   return (
     <div className="relative">
-      {loading && <MainLoader />}
+      {loading && <Loader />}
 
       <CustomHeader
         splineData={splineData}
