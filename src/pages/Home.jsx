@@ -85,11 +85,11 @@ setFirstClick(false);
       <Loader/>
       )}
 
-      {/* <CustomHeader
+      <CustomHeader
         splineData={splineData}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-      /> */}
+      />
       <Spline
         className="[&_canvas]:!h-[100svh]"
         onLoad={onLoad}
