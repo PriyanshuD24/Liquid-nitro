@@ -60,18 +60,15 @@
 
 .line {
   position: absolute;
-  width: "70%";
-  left: "0";
-  top: "62px";
+  width: 70%;
+  left: 0;
+  top: 62px;
   background-color: grey;
 }
 
 .loading-container {
-  /* position: absolute; */
   height: 4px;
   background-color: white;
-  /* left: 0;
-  top: 62px; */
   border-radius: 10px;
   transition: all 0.5s ease;
 }
