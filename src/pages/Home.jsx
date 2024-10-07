@@ -55,7 +55,7 @@ export default function Home() {
     const handleBodyClick = () => {
      
       if(firstClick){
-        console.log("First click on the document detected!");
+        // console.log("First click on the document detected!");
         // Play music
         setPlayAudio(true);
        
@@ -64,7 +64,7 @@ setFirstClick(false);
       
       // Mark the first click as complete
      
-      console.log("Document clicked!");
+      // console.log("Document clicked!");
     };
 
     // Attach the event listener to the body (or document)
