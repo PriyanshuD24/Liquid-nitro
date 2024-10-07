@@ -37,11 +37,9 @@ const Loader = ({ progress }) => {
         <div className="centre-content">
           <img src={logo} alt="logo" />
           <div
+          className="line"
             style={{
-              width: "70%",
-              position: "absolute",
-              left: "0",
-              top: "62px",
+             
             }}
           >
             <div

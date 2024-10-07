@@ -58,12 +58,20 @@
   margin-bottom: 10px;
 }
 
+.line {
+  position: absolute;
+  width: "70%";
+  left: "0";
+  top: "62px";
+  background-color: grey;
+}
+
 .loading-container {
   /* position: absolute; */
   height: 4px;
   background-color: white;
-  left: 0;
-  top: 62px;
+  /* left: 0;
+  top: 62px; */
   border-radius: 10px;
   transition: all 0.5s ease;
 }
@@ -107,7 +115,7 @@
     width: 85%;
   }
 
-  .loading-container::before {
+  .line {
     width: 60%;
     left: 7%;
     top: 37%;
