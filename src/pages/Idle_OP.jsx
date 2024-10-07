@@ -3,7 +3,7 @@ import CustomCard from "../components/customCard";
 
 const Idle_OP = ({ setScene }) => {
   return (
-    <CustomCard setScene={setScene} className={"sm:z-[0]  max-h-[70svh] py-2 overflow-y-scroll z-20"}>
+    <CustomCard setScene={setScene} className={"sm:z-[0]  max-h-[70svh] py-2 overflow-y-auto z-20"}>
       <h2 className="text-2xl xl:text-5xl sm:font-normal font-bold mb-4 sm:mb-10 lg:mb-20 text-white text-center sm:text-left">Our Philosophy</h2>
 
       <div className="flex flex-col items-center sm:flex-row justify-center text-white  text-center">
@@ -45,7 +45,7 @@ style={{
   backgroundColor: "rgba(255,255,255,0.5)",
 
 }}
-  className="h-28 md:h-36 w-28 md:w-36 rounded-full  text-xl md:text-3xl font-semibold flex items-center justify-center text-[#03142F]">
+  className="h-28 md:h-36 w-28 md:w-36 rounded-full  text-xl md:text-2xl font-semibold flex items-center justify-center text-[#03142F]">
 {children}
   </div>
 )

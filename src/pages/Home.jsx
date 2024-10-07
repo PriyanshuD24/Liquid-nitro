@@ -1,5 +1,5 @@
 import Spline from "@splinetool/react-spline";
-import { useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import AboutUs from "./AboutUs";
 import Idle_OV from "./Idle_OV";
 import Idle_OP from "./Idle_OP";
@@ -17,12 +17,16 @@ import Int_NL02 from "./nitroLife/Int_NL02";
 import Int_NL03 from "./nitroLife/Int_NL03";
 import MainLoader from "./loading/MainLoader";
 import ReactOut from "./reachOut/ReactOut";
+import Music from "../assets/bgMusic/sound.mp3"
+import { AudioContext } from "../components/AudioContext";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [sceneVar, setSceneVar] = useState(0);
   const [splineData, setSplineData] = useState({});
   const [currentPage, setCurrentPage] = useState(0);
+  const [firstClick , setFirstClick] = useState(true);
+  const {playAudio ,setPlayAudio} = useContext(AudioContext);
 
   function sendmail() {
     window.location.href = "mailto:contact@liquidnitrogames.com";
@@ -47,6 +51,33 @@ export default function Home() {
       setCurrentPage(findIndexByValue(e.target.id));
     }
   }
+  useEffect(()=> {
+    const handleBodyClick = () => {
+     
+      if(firstClick){
+        console.log("First click on the document detected!");
+        // Play music
+        setPlayAudio(true);
+       
+setFirstClick(false);
+      }
+      
+      // Mark the first click as complete
+     
+      console.log("Document clicked!");
+    };
+
+    // Attach the event listener to the body (or document)
+    document.body.addEventListener('click', handleBodyClick);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      document.body.removeEventListener('click', handleBodyClick);
+    };
+  },[firstClick])
+
+
+
 
   return (
     <div className="relative">
@@ -61,7 +92,7 @@ export default function Home() {
         className="[&_canvas]:!h-[100svh]"
         onLoad={onLoad}
         onSplineMouseUp={onSplineMouseDown}
-        scene="https://prod.spline.design/qKWI91V5r5MPadzz/scene.splinecode"
+        scene="https://prod.spline.design/ARwIv8KtPA2-p1Ns/scene.splinecode"
       />
 
       {/* -----------About Us Section----------- */}

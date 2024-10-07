@@ -3,7 +3,7 @@ import CustomCard from "../components/customCard";
 
 const Idle_LE = ({ setScene }) => {
   return (
-    <CustomCard setScene={setScene} className={"sm:z-0  max-h-[70svh] py-2 overflow-y-scroll z-20"}>
+    <CustomCard setScene={setScene} className={"sm:z-0  max-h-[70svh] py-2 overflow-y-auto  theme-scroll z-20"}>
       <div className=" ">
         
       <h2 className="text-2xl xl:text-5xl mb-4 sm:mb-10 lg:mb-20 text-white text-center sm:text-left font-bold sm:font-normal">Our Leadership Experience</h2>

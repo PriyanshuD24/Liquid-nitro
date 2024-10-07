@@ -59,7 +59,7 @@ const TeamMember = ({ setScene }) => {
   ];
 
   return (
-    <CustomCard setScene={setScene} className={"  max-h-[70svh] py-2 overflow-y-scroll z-20"}>
+    <CustomCard setScene={setScene} className={"  max-h-[70svh] py-2 overflow-y-auto z-20"}>
 
       <Slider {...settings}>
         {info.map((item, idx) => (

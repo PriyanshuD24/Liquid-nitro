@@ -1,6 +1,7 @@
 export const headData = [
   {
-    name: "Home",
+    name: "home",
+    home:"",
     about: "4d0fe2eb-01da-4f28-a72e-1197ce3e8ed8",
     reachOut: "97efce17-a430-4327-9b10-8b1d2ae954af",
     nitroLife: "128e5299-5291-43a9-a7dc-c163f01b1032",
@@ -9,6 +10,7 @@ export const headData = [
   {
     
     name: "about",
+    home:"bfa2d8d5-5324-424b-b303-9947e78ed17f",
     about: "",
     reachOut: "026474b2-73af-41aa-abe8-a80d5fc44f88",
     nitroLife: "0e126f7d-cc79-46a7-b449-c340b4cc86bd",
@@ -16,6 +18,7 @@ export const headData = [
   },
   {
     name: "reachOut",
+    home:"a07ff31d-f6f4-4aa0-a3f8-39cf67cf88db",
     about: "a54086b5-d841-45fe-87f4-82280d080ed1",
     reachOut: "",
     nitroLife: "db19949e-5a74-40d1-b740-861447b5da66",
@@ -23,6 +26,7 @@ export const headData = [
   },
   {
     name: "offerings",
+    home:"250ac78b-5c12-49b3-8d6d-30052fdecef3",
     about: "25c00a5b-d577-4537-bd25-fe92f9f8fbd8",
     reachOut: "eba86d26-14f2-452a-ae5b-b29b1b488fbf",
     nitroLife: "ea56d033-af78-41db-bfd8-edc88b7c2456",
@@ -30,6 +34,7 @@ export const headData = [
   },
   {
     name: "nitroLife",
+    home:"a000b5b9-c8f2-4a31-9809-436422f15ec4",
     about: "c403ca43-b819-4806-89cc-3361ce179980",
     reachOut: "fd1b4f93-e741-4623-9f19-217fee0ce72b",
     nitroLife: "",
@@ -38,7 +43,7 @@ export const headData = [
 ];
 
 export function findIndexByValue(value) {
-  console.log(value, "value in func");
+  // console.log(value, "value in func");
   
   // First, find the key corresponding to the value
   let matchedKey = null;

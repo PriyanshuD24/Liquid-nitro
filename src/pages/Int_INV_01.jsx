@@ -3,7 +3,7 @@ import CustomCard from "../components/customCard";
 
 const Int_INV_01 = ({ setScene, style }) => {
   return (
-    <CustomCard setScene={setScene} className={"top-1/4 left-4 md:top-1/3 md:left-1/3  sm:z-0  max-h-[70svh] py-2 overflow-y-scroll z-20"}>
+    <CustomCard setScene={setScene} className={"top-1/4 left-4 md:top-1/3 md:left-1/3  sm:z-0  max-h-[70svh] py-2 overflow-y-auto z-20"}>
       <div className="">
 
       <h2 className="text-2xl xl:text-7xl mb-4 sm:mb-10 text-white font-bold sm:font-normal text-center sm:text-left">Our Investor</h2>

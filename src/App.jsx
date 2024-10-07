@@ -2,12 +2,13 @@ import React from "react";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLoader from "./pages/loading/MainLoader";
+import AudioProvider from "./components/AudioContext";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <AudioProvider> <Home /> </AudioProvider>,
     },
     // {
     //   path: "/loader",

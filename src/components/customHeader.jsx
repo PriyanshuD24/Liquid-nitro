@@ -27,6 +27,8 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
     { label: "Offerings", key: "offerings", page: 3 },
     { label: "Nitro Life", key: "nitroLife", page: 4 },
     { label: "Reach out", key: "reachOut", page: 2 },
+    // { label: "Home", key: "home", page: 0 },
+
   ];
 
   function triggerAnimation(objectName) {
@@ -50,7 +52,7 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
   }
 
   function triggerHoverEffect(objectName, isHovering) {
-    // console.log(objectName);
+    // console.log(objectName , "++++++++++");
 
     if (objectName) {
       const obj = splineData.findObjectById(objectName);
@@ -91,10 +93,12 @@ const CustomHeader = ({ splineData, setCurrentPage, currentPage }) => {
         </div>
       )}
 
-      <div className="lg:h-18 mx-auto container flex items-center justify-between flex-wrap lg:flex-nowrap md:px-8 px-4 md:px-auto py-4">
+      <div className="lg:h-18 mx-auto container flex items-center justify-between flex-wrap lg:flex-nowrap md:px-8 px-4 md:px-auto py-4 ">
         {/* Logo */}
-        <div className="lg:w-48 sm:w-40 w-36 hover:scale-[1.15] transition-transform duration-300"
-       onClick={() =>navigate("/") }
+        <div 
+       
+        className="lg:w-48 sm:w-40 w-36 hover:scale-[1.15] transition-transform duration-300  "
+       onClick={()=> triggerAnimation(headData[currentPage].home)}
         >
           <img src={MainLogo} />
         </div>
